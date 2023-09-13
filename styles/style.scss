@@ -1,0 +1,359 @@
+@mixin flexCenter($direction,$justify,$align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    @include flexCenter(row, space-around, center);
+
+    li {
+        display: inline;
+        list-style-type: none;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+        user-select: none;
+
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+            background-color: lightgray;   
+        }
+    }
+    
+}
+
+
+header {
+    position: relative;
+    h1 {
+        padding: 1rem;
+        @include flexCenter(row, center, center)
+    }
+
+    .add-recipe {
+        font-size: 14px;
+        position: absolute;
+        top: 25px;
+        right: 130px;
+    }
+
+    .add-book {
+        font-size: 14px;
+        position: absolute;
+        right: 40px;
+        top: 25px;
+    }
+}
+
+
+
+main {
+    border-top: 1px solid;
+    position: relative;
+    flex-grow: 1;
+
+    .book-form {
+        display: none;
+            position: absolute;
+            top: 100px;
+            left: 44.5%;
+            z-index: 3;
+            background-color: whitesmoke;
+            border: 1px solid black;
+            padding: .4rem;
+
+        fieldset {
+            border: none;
+            gap: 3px;
+            background-color: whitesmoke;
+            @include flexCenter(column, center, "");
+
+            legend {
+                margin-left: -2px;
+            }
+
+            label {
+                text-align: left;
+            }
+
+            label[for="addNow"] {
+                -moz-user-select: none;
+                user-select: none;
+            }
+
+            #submit {
+                margin-top: .5rem;
+                padding: .4rem;
+            }
+        }
+
+        .visible {
+            display: block;
+           
+        }
+    }
+
+    .recipe-form-box {
+        form {
+            display: none;
+            position: absolute;
+            top: 100px;
+            left: 43%;
+            z-index: 3;
+            background-color: whitesmoke;
+            border: 1px solid black;
+            padding: .3rem;
+
+            fieldset {
+                height: 100%;
+                text-align: left;
+                border: none;
+                gap: 3px;
+                @include flexCenter(column, "", "");
+
+                legend {
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    margin-left: -4px;
+                }
+
+                label[for="type"] {
+                    margin-top: -5px;
+                }
+
+                .ingredients-input-box {
+                    position: relative;
+                    .add-ingredients-buttons {
+                        position: absolute;
+                        top: 0;
+                        right: 5px;
+    
+                        span:hover {
+                            color: violet;
+                            cursor: pointer;
+                        }
+                    }
+                    .ingredient-inputs {
+                        gap: 5px;
+                        @include flexCenter(column, "", "")
+                    }
+                }
+
+                .results-input-box {
+                    position: relative;
+
+                    .add-result-buttons {
+                        position: absolute;
+                        top: 0;
+                        right: 5px;
+
+                        span:hover {
+                            color: violet;
+                            cursor: pointer;
+                        }
+                    }
+
+                    .result-inputs {
+                        gap: 5px;
+                        @include flexCenter(column, "", "")
+                    }
+                }
+
+                #notes {
+                    resize: none;
+                }
+                
+                #submitRecipe {
+                    margin-top: 5px;
+                    padding: .4rem;
+                }
+
+                select {
+                    padding: .2rem;
+                }
+
+                
+            }
+    
+        }
+        
+        .visible {
+            display: block;
+           
+        }
+    }
+
+    .aspect-list, .craft-list {
+        display: none;
+        border-top: 1px solid black;
+
+        li:not(:last-child) {
+            border-right: 1px solid black;
+        }
+    }
+    
+    .visible {
+        display: flex;
+    }
+
+        .hush-tab {
+            border-right: 1px solid black;
+        }
+        
+        .content {
+            padding: 10px;
+            border-top: 1px solid black;
+        }
+
+        .content-headers, .hush-content-headers, .craft-content-headers {
+            display: grid;
+            grid-auto-flow: row;
+            text-align: center;
+            border: 1px solid black;
+
+            div {
+                padding: .4rem;
+            }
+
+            div:not(:last-child) {
+                border-right: 1px solid black;
+            }
+        }
+
+        .craft-content-headers {
+            grid-template-columns: repeat(7, 1fr);
+        }
+
+        .content-headers {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .hush-content-headers {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .box {
+            display: grid;
+            grid-template-rows: 40;
+            grid-auto-flow: row;
+            grid-auto-rows: 40;
+        
+        }
+
+        .hush-container-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border: 1px solid black;
+            border-top: none;
+            position: relative;
+
+            .fa-square-plus {
+                position: absolute;
+                top: 20px;
+                left: 10px;
+
+                &:hover {
+                    color: violet;
+                    cursor: pointer;
+                }
+            }
+
+            div {
+                padding: 10px;
+                padding-left: 30px;
+                text-align: center;
+                @include flexCenter(row, center, center)
+            }
+
+            .book {
+                border-right: 1px solid black;
+            }
+            .skill {
+                border-left: 1px solid black;
+            }
+        }
+
+        .container-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            border-bottom: 1px solid black;
+            
+            div {
+                text-align: center;
+                border-right: 1px solid black;
+                padding: .5rem;
+                @include flexCenter(row, center, center)
+            }
+
+            .book {
+                border-left: 1px solid black;
+            }
+
+            .skill {
+                border-right: 1px solid black;
+            }
+        
+        }
+
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            border-bottom: 1px solid black;
+            width: 100%;
+
+            div {
+                text-align: center;
+                border-right: 1px solid black;
+                padding: .5rem;
+                @include flexCenter(row, center, center)
+            }
+
+            .name {
+                border-left: 1px solid black;
+            }
+
+            .notes {
+                border-right: 1px solid black;
+            }
+        }
+       
+        
+}
+
+footer {
+    padding: 1rem;
+    @include flexCenter(row, center, center);
+
+    ul {
+        list-style-type: none;
+    }
+}

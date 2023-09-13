@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://kit.fontawesome.com/6d3d1d74bf.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Book of Hours</title>
+</head>
+<body>
+    <header>
+        <h1>Book of Hours</h1>
+        <button class="add-recipe">Add Recipe</button>
+        <button class="add-book">Add Book</button>
+    </header>
+    <main>
+            <form class="book-form">
+                <fieldset>
+                    <legend>New Book</legend>
+                    <label for="bookName">Name:</label>
+                    <input type="text" name="bookName" id="bookName" placeholder="Book name">
+
+                    <label for="skill">Skill:</label>
+                    <input type="text" name="skill" id="skill" placeholder="Skill name">
+
+                    <label for="memoryName">Memory Name:</label>
+                    <select name="memory" id="memoryName">
+                    </select>
+
+                    <div class="check">
+                        <input type="checkbox" name="addnow" id="addNow">
+                        <label for="addNow">Add now?</label>
+                    </div>
+                    <button id="submit">Create Book</button>
+                </fieldset>
+            </form>
+        
+        <div class="recipe-form-box">
+            <form class="recipe-form">
+                <fieldset>
+                    <legend>New Recipe</legend>
+                    <label for="type">Recipe Type:</label>
+                    <select name="type" id="type"></select>
+                    <label for="recipeName">Recipe Name:</label>
+                    <input type="text" name="recipeName" id="recipeName">
+                    <label for="skillToCraft">Skill Name:</label>
+                    <input type="text" name="skillToCraft" id="skillToCraft">
+
+                    <label for="workStation">Workstation:</label>
+                    <select name="station" id="workStation"></select>
+
+                    <div class="ingredients-input-box">
+                        <div class="add-ingredients-buttons"><span id="addIngredients" class="fa-solid fa-square-plus"></span> <span id="removeIngredients" class="fa-solid fa-square-minus"></span></div>
+                        <label for="ingredients">Ingredients</label>
+                        <div class="ingredient-inputs">
+                            <input type="text" name="ingredients" id="ingredients">
+                        </div>
+                    </div>
+                    <label for="aspectName">Main Aspect:</label>
+                    <select name="aspect" id="aspectName">
+                    </select>
+
+                    <div class="results-input-box">
+                        <div class="add-result-buttons"><span id="addResult" class="fa-solid fa-square-plus"></span> <span id="removeResult" class="fa-solid fa-square-minus"></span></div>
+                        <label for="result">Result:</label>
+                        <div class="result-inputs">
+                            <input type="text" name="result" id="result">
+                        </div>
+                    </div>
+
+                    <label for="notes">Extra Notes</label>
+                    <textarea name="notes" id="notes" cols="30" rows="2"></textarea>
+
+                    <button id="submitRecipe">Create Recipe</button>
+                    
+                </fieldset>
+            </form>
+        </div>
+        <div class="main-nav">
+            <nav>
+                <ul>
+                    <li class="hush-tab">Hush Library</li>
+                    <li class="craft-tab">Crafting Recipes</li>
+                </ul>
+            </nav>
+        </div>
+        <nav>
+            <ul class="aspect-list">
+                <li class="aspect-tab">Lantern</li>
+                <li class="aspect-tab">Forge</li>
+                <li class="aspect-tab">Edge</li>
+                <li class="aspect-tab">Winter</li>
+                <li class="aspect-tab">Heart</li>
+                <li class="aspect-tab">Grail</li>
+                <li class="aspect-tab">Knock</li>
+                <li class="aspect-tab">Rose</li>
+                <li class="aspect-tab">Scale</li>
+                <li class="aspect-tab">Moon</li>
+                <li class="aspect-tab">Sky</li>
+                <li class="aspect-tab">Nectar</li>
+                <li class="aspect-tab">Moth</li>
+            </ul>
+            <ul class="craft-list">
+                <li class="recipe-tab">Beverages</li>
+                <li class="recipe-tab">Devices</li>
+                <li class="recipe-tab">Inks</li>
+                <li class="recipe-tab">Marks</li>
+                <li class="recipe-tab">Materials</li>
+                <li class="recipe-tab">Memories</li>
+                <li class="recipe-tab">Misc</li>
+            </ul>
+        </nav>
+        <div class="content">
+        </div>
+    </main>
+    <footer>
+        <h2></h2>
+        <ul>
+            <li>
+
+            </li>
+        </ul>
+    </footer>
+    <script type="module" src="./src/index.js"></script>
+</body>
+</html>
