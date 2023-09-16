@@ -1,0 +1,1 @@
+A personal project to help me log information for the game Book of Hours
