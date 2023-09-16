@@ -159,6 +159,8 @@ function createHushTab(bookObject, box) {
     container.classList.add("hush-container-grid")
     const addToStorage = document.createElement("span")
     addToStorage.classList.add("fa-solid", "fa-square-plus", "fa-xl")
+    const deleteBook = document.createElement("span")
+    deleteBook.classList.add("fa-solid", "fa-square-xmark", "fa-xl")
     const bookName = document.createElement("div")
     bookName.classList.add("book")
     bookName.textContent = bookObject.name
@@ -168,11 +170,17 @@ function createHushTab(bookObject, box) {
     skillName.classList.add("skill")
     skillName.textContent = bookObject.skillName
                     
-    container.append(addToStorage, bookName, memoryName, skillName)
+    bookName.append(addToStorage, deleteBook)
+    container.append(bookName, memoryName, skillName)
     box.appendChild(container)
 
     addToStorage.addEventListener("click", () => {
         storage.addBook(bookObject)
+    })
+
+    deleteBook.addEventListener("click", () => {
+        hushStorage.deleteBook(bookName.textContent)
+        loadHush()
     })
 }
 

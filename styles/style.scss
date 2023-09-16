@@ -263,10 +263,7 @@ main {
 
         .box {
             display: grid;
-            grid-template-rows: 40;
             grid-auto-flow: row;
-            grid-auto-rows: 40;
-        
         }
 
         .hush-container-grid {
@@ -274,24 +271,38 @@ main {
             grid-template-columns: repeat(3, 1fr);
             border: 1px solid black;
             border-top: none;
-            position: relative;
+            font-size: 16px;
+            
 
-            .fa-square-plus {
-                position: absolute;
-                top: 20px;
-                left: 10px;
+            div:first-child {
+                padding-right: 40px;
+                padding-left: 40px;
+                position: relative;
 
-                &:hover {
-                    color: violet;
-                    cursor: pointer;
+                .fa-square-plus {
+                    position: absolute;
+                    left: 5px;
+
+                    &:hover {
+                        color: violet;
+                        cursor: pointer;
+                    }
+                }
+
+                .fa-square-xmark {
+                    position: absolute;
+                    right: 5px;
+                    &:hover {
+                        color: violet;
+                        cursor: pointer;
+                    }
                 }
             }
 
             div {
                 padding: 10px;
-                padding-left: 30px;
                 text-align: center;
-                @include flexCenter(row, center, center)
+                @include flexCenter(row, center, center);
             }
 
             .book {
