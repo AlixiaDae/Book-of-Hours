@@ -275,8 +275,6 @@ main {
             
 
             div:first-child {
-                padding-right: 40px;
-                padding-left: 40px;
                 position: relative;
 
                 .fa-square-plus {
@@ -299,8 +297,11 @@ main {
                 }
             }
 
+            p {
+                width: 350px;
+            }
+
             div {
-                padding: 10px;
                 text-align: center;
                 @include flexCenter(row, center, center);
             }

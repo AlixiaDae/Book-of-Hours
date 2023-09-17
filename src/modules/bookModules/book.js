@@ -5,4 +5,8 @@ export default class Book{
         this.skillName = skillName
     }
 
+    setName(newName) {
+        this.name = newName
+    }
+
 }

@@ -239,8 +239,6 @@ main .hush-container-grid {
   font-size: 16px;
 }
 main .hush-container-grid div:first-child {
-  padding-right: 40px;
-  padding-left: 40px;
   position: relative;
 }
 main .hush-container-grid div:first-child .fa-square-plus {
@@ -259,8 +257,10 @@ main .hush-container-grid div:first-child .fa-square-xmark:hover {
   color: violet;
   cursor: pointer;
 }
+main .hush-container-grid p {
+  width: 350px;
+}
 main .hush-container-grid div {
-  padding: 10px;
   text-align: center;
   display: flex;
   flex-direction: row;

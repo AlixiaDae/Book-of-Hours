@@ -1,4 +1,5 @@
 import Library from "./library.js"
+import Book from "./book.js"
 
 export default class Storage {
     constructor(name) {
@@ -12,6 +13,10 @@ export default class Storage {
         const library = Object.assign(
             new Library(),
             JSON.parse(localStorage.getItem(this.name))
+        )
+
+        library.setBooks(
+            library.getBooks().map(book => Object.assign(new Book(), book))
         )
         return library
     }
@@ -29,9 +34,20 @@ export default class Storage {
     }
 
     formatBook(memoryName, chosenBook) {
-        const library=  this.getBooksMenu()
+        const library = this.getBooksMenu()
         library.formatBook(memoryName)
         this.saveBooks(library)
     }
 
+    renameBook(oldBookName, newName) {
+        const library = this.getBooksMenu()
+        library.getBook(oldBookName).setName(newName)
+        this.saveBooks(library)
+    }
+
+    deleteThis(bookMemory, bookSkill) {
+        const library = this.getBooksMenu()
+        library.deleteThis(bookMemory, bookSkill)
+        this.saveBooks(library)
+    }
 }
