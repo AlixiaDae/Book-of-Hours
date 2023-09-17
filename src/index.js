@@ -181,7 +181,7 @@ function createHushTab(bookObject, box) {
     })
 
     deleteBook.addEventListener("click", () => {
-        hushStorage.deleteBook(bookName.textContent)
+        storage.deleteBook(bookName.textContent)
         loadHush()
     })
 
