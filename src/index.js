@@ -168,12 +168,15 @@ function createHushTab(bookObject, box) {
     bookName.textContent = bookObject.name
     const memoryName = document.createElement("div")
     memoryName.textContent = bookObject.memoryName.charAt(0).toUpperCase() + bookObject.memoryName.slice(1)
-    const skillName = document.createElement("div")
-    skillName.classList.add("skill")
+    const skillNameContainter = document.createElement("div")
+    skillNameContainter.classList.add("skill")
+    const skillName = document.createElement("p")
+    skillName.setAttribute("contenteditable", "true")
     skillName.textContent = bookObject.skillName
-                    
+    
     bookNameContainer.append(bookName, addToStorage, deleteBook)
-    container.append(bookNameContainer, memoryName, skillName)
+    skillNameContainter.appendChild(skillName)
+    container.append(bookNameContainer, memoryName, skillNameContainter)
     box.appendChild(container)
 
     addToStorage.addEventListener("click", () => {
@@ -190,6 +193,14 @@ function createHushTab(bookObject, box) {
             hushStorage.renameBook(bookObject.name, bookName.innerText)
             e.preventDefault()
             bookName.blur()
+        }
+    })
+
+    skillName.addEventListener("keydown", (e) => {
+        if(e.key === "Enter") {
+            hushStorage.renameSkill(bookObject.name, skillName.innerText)
+            e.preventDefault()
+            skillName.blur()
         }
     })
 }

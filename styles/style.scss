@@ -239,10 +239,7 @@ main {
             grid-auto-flow: row;
             text-align: center;
             border: 1px solid black;
-
-            div {
-                padding: .4rem;
-            }
+            align-items: center;
 
             div:not(:last-child) {
                 border-right: 1px solid black;
@@ -250,15 +247,15 @@ main {
         }
 
         .craft-content-headers {
-            grid-template-columns: repeat(7, 1fr);
+            grid-template-columns: repeat(7, minmax(0,1fr));
         }
 
         .content-headers {
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(4, minmax(0,1fr));
         }
 
         .hush-content-headers {
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(3, minmax(0,1fr));
         }
 
         .box {
@@ -268,10 +265,11 @@ main {
 
         .hush-container-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(3, minmax(0,1fr));
             border: 1px solid black;
             border-top: none;
             font-size: 16px;
+            align-items: center;
             
 
             div:first-child {
@@ -309,6 +307,7 @@ main {
             .book {
                 border-right: 1px solid black;
             }
+
             .skill {
                 border-left: 1px solid black;
             }
@@ -316,13 +315,13 @@ main {
 
         .container-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(4, minmax(0,1fr));
             border-bottom: 1px solid black;
+            align-items: center;
             
             div {
                 text-align: center;
                 border-right: 1px solid black;
-                padding: .5rem;
                 @include flexCenter(row, center, center)
             }
 
@@ -338,14 +337,14 @@ main {
 
         .recipe-grid {
             display: grid;
-            grid-template-columns: repeat(7, 1fr);
+            grid-template-columns: repeat(7, minmax(0,1fr));
             border-bottom: 1px solid black;
             width: 100%;
+            align-items: center;
 
             div {
                 text-align: center;
                 border-right: 1px solid black;
-                padding: .5rem;
                 @include flexCenter(row, center, center)
             }
 

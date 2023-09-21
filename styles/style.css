@@ -211,21 +211,19 @@ main .content-headers, main .hush-content-headers, main .craft-content-headers {
   grid-auto-flow: row;
   text-align: center;
   border: 1px solid black;
-}
-main .content-headers div, main .hush-content-headers div, main .craft-content-headers div {
-  padding: 0.4rem;
+  align-items: center;
 }
 main .content-headers div:not(:last-child), main .hush-content-headers div:not(:last-child), main .craft-content-headers div:not(:last-child) {
   border-right: 1px solid black;
 }
 main .craft-content-headers {
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(7, minmax(0, 1fr));
 }
 main .content-headers {
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 main .hush-content-headers {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 main .box {
   display: grid;
@@ -233,10 +231,11 @@ main .box {
 }
 main .hush-container-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   border: 1px solid black;
   border-top: none;
   font-size: 16px;
+  align-items: center;
 }
 main .hush-container-grid div:first-child {
   position: relative;
@@ -275,13 +274,13 @@ main .hush-container-grid .skill {
 }
 main .container-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   border-bottom: 1px solid black;
+  align-items: center;
 }
 main .container-grid div {
   text-align: center;
   border-right: 1px solid black;
-  padding: 0.5rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -295,14 +294,14 @@ main .container-grid .skill {
 }
 main .recipe-grid {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(7, minmax(0, 1fr));
   border-bottom: 1px solid black;
   width: 100%;
+  align-items: center;
 }
 main .recipe-grid div {
   text-align: center;
   border-right: 1px solid black;
-  padding: 0.5rem;
   display: flex;
   flex-direction: row;
   justify-content: center;

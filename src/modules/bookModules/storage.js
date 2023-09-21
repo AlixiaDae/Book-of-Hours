@@ -45,9 +45,9 @@ export default class Storage {
         this.saveBooks(library)
     }
 
-    deleteThis(bookMemory, bookSkill) {
+    renameSkill(bookName, newSkillName) {
         const library = this.getBooksMenu()
-        library.deleteThis(bookMemory, bookSkill)
+        library.getBook(bookName).setSkill(newSkillName)
         this.saveBooks(library)
     }
 }
