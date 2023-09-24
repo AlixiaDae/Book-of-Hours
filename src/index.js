@@ -3,6 +3,7 @@ import Book from "./modules/bookModules/book.js"
 import memoryList from "./modules/memory.js"
 import recipeStorage from "./modules/recipeModules/localRecipes.js"
 import Recipe from "./modules/recipeModules/recipe.js"
+import mainLibrary from "./modules/mainLibraryStorage.js"
 
 //Local Storages
 
@@ -109,12 +110,10 @@ aspectTabs.forEach(tab =>
     tab.addEventListener("click", () => {{
         createHeaders("tabs")
         const box = document.createElement("div")
-        box.classList.add("box")
-        contentBox.appendChild(box)
         const tabName = tab.textContent
         const list = sortBookList(tabName)
         for(let i = 0; i < list.length; i++) {
-            createAspectTab(list[i], tabName, box)
+            createAspectTab(list[i], tabName, contentBox)
         }
     }
 }))
@@ -166,8 +165,11 @@ function createHushTab(bookObject, box) {
     const bookName = document.createElement("p")
     bookName.setAttribute("contenteditable", "true")
     bookName.textContent = bookObject.name
-    const memoryName = document.createElement("div")
+    const memoryNameContainer = document.createElement("div")
+    memoryNameContainer.classList.add("memory")
+    const memoryName = document.createElement("p")
     memoryName.textContent = bookObject.memoryName.charAt(0).toUpperCase() + bookObject.memoryName.slice(1)
+    memoryName.setAttribute("contenteditable", "true")
     const skillNameContainter = document.createElement("div")
     skillNameContainter.classList.add("skill")
     const skillName = document.createElement("p")
@@ -175,9 +177,14 @@ function createHushTab(bookObject, box) {
     skillName.textContent = bookObject.skillName
     
     bookNameContainer.append(bookName, addToStorage, deleteBook)
+    memoryNameContainer.appendChild(memoryName)
     skillNameContainter.appendChild(skillName)
-    container.append(bookNameContainer, memoryName, skillNameContainter)
+    container.append(bookNameContainer, memoryNameContainer, skillNameContainter)
     box.appendChild(container)
+
+    const plusMinus = document.querySelectorAll(".fa-solid")
+
+    plusMinus.forEach(button => button.addEventListener("click", flash))
 
     addToStorage.addEventListener("click", () => {
         storage.addBook(bookObject)
@@ -193,6 +200,14 @@ function createHushTab(bookObject, box) {
             hushStorage.renameBook(bookObject.name, bookName.innerText)
             e.preventDefault()
             bookName.blur()
+        }
+    })
+
+    memoryName.addEventListener("keydown", (e) => {
+        if(e.key === "Enter") {
+            hushStorage.renameMemory(bookObject.name, memoryName.innerText.toLowerCase())
+            e.preventDefault()
+            memoryName.blur()
         }
     })
 
@@ -217,12 +232,9 @@ recipeTabs.forEach(tab =>
     tab.addEventListener("click", () => {
         createHeaders("recipe")
         const tabName = tab.textContent
-        const box = document.createElement("div")
-        box.classList.add("box")
-        contentBox.appendChild(box)
         const list = recipeStorage.getRecipesMenu().book
         for(let i = 0; i < list.length; i++) {
-            createCraftTab(list[i], tabName, box)
+            createCraftTab(list[i], tabName, contentBox)
         }
         
     })
@@ -436,6 +448,15 @@ function sortBookList(tabName) {
         })
             return sortedList
     }
+}
+
+//Util for flash animation
+
+function flash(e) {
+    e.target.classList.add("flash")
+    setTimeout(function() {
+        e.target.classList.remove("flash")
+    }, 0.03)
 }
 
 //TEMP TODO ADD RECIPES

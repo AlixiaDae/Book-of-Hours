@@ -13,4 +13,8 @@ export default class Book{
         this.skillName = newName
     }
 
+    setMemory(newName) {
+        this.memoryName = newName
+    }
+
 }

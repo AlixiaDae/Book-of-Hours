@@ -220,144 +220,86 @@ main {
             border-right: 1px solid black;
         }
     }
-    
+
     .visible {
         display: flex;
     }
 
-        .hush-tab {
+    .hush-tab {
+        border-right: 1px solid black;
+    }
+
+    .content {
+        border-top: 1px solid black;
+        padding: 1rem;
+    }
+        
+    .hush-content-headers, .craft-content-headers, .content-headers, .hush-container-grid, .container-grid, .recipe-grid {
+        display: grid;
+        text-align: center;
+        border: 1px solid black;
+
+        div:not(:last-child) {
             border-right: 1px solid black;
         }
-        
-        .content {
-            padding: 10px;
-            border-top: 1px solid black;
+    }
+
+    .hush-content-headers, .hush-container-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .craft-content-headers, .recipe-grid {
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+    .content-headers, .container-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .hush-container-grid, .container-grid, .recipe-grid {
+        border-top: none;
+
+        div {
+            padding: 15px;
         }
+    }
 
-        .content-headers, .hush-content-headers, .craft-content-headers {
-            display: grid;
-            grid-auto-flow: row;
-            text-align: center;
-            border: 1px solid black;
-            align-items: center;
+    .hush-container-grid {
+        border-top: none;
 
-            div:not(:last-child) {
-                border-right: 1px solid black;
-            }
-        }
+        .book {
+            position: relative;
 
-        .craft-content-headers {
-            grid-template-columns: repeat(7, minmax(0,1fr));
-        }
+            .fa-square-plus, .fa-square-xmark {
+                position: absolute;
+                top: 0;
+                transition: all 0.07s;
 
-        .content-headers {
-            grid-template-columns: repeat(4, minmax(0,1fr));
-        }
-
-        .hush-content-headers {
-            grid-template-columns: repeat(3, minmax(0,1fr));
-        }
-
-        .box {
-            display: grid;
-            grid-auto-flow: row;
-        }
-
-        .hush-container-grid {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0,1fr));
-            border: 1px solid black;
-            border-top: none;
-            font-size: 16px;
-            align-items: center;
-            
-
-            div:first-child {
-                position: relative;
-
-                .fa-square-plus {
-                    position: absolute;
-                    left: 5px;
-
-                    &:hover {
-                        color: violet;
-                        cursor: pointer;
-                    }
-                }
-
-                .fa-square-xmark {
-                    position: absolute;
-                    right: 5px;
-                    &:hover {
-                        color: violet;
-                        cursor: pointer;
-                    }
+                &:hover {
+                    cursor: pointer;
+                    color: violet;
                 }
             }
 
-            p {
-                width: 350px;
+            .fa-square-plus {
+                top: 40px;
+                left: 10px;
             }
 
-            div {
-                text-align: center;
-                @include flexCenter(row, center, center);
+            .fa-square-xmark {
+                top: 40px;
+                right: 10px;
             }
 
-            .book {
-                border-right: 1px solid black;
-            }
-
-            .skill {
-                border-left: 1px solid black;
-            }
-        }
-
-        .container-grid {
-            display: grid;
-            grid-template-columns: repeat(4, minmax(0,1fr));
-            border-bottom: 1px solid black;
-            align-items: center;
-            
-            div {
-                text-align: center;
-                border-right: 1px solid black;
-                @include flexCenter(row, center, center)
-            }
-
-            .book {
-                border-left: 1px solid black;
-            }
-
-            .skill {
-                border-right: 1px solid black;
-            }
-        
-        }
-
-        .recipe-grid {
-            display: grid;
-            grid-template-columns: repeat(7, minmax(0,1fr));
-            border-bottom: 1px solid black;
-            width: 100%;
-            align-items: center;
-
-            div {
-                text-align: center;
-                border-right: 1px solid black;
-                @include flexCenter(row, center, center)
-            }
-
-            .name {
-                border-left: 1px solid black;
-            }
-
-            .notes {
-                border-right: 1px solid black;
+            .flash {
+                &:hover {
+                    color: rgb(101, 2, 143);
+                }
             }
         }
-       
-        
+
+    }
+
 }
 
 footer {

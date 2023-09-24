@@ -203,115 +203,57 @@ main .hush-tab {
   border-right: 1px solid black;
 }
 main .content {
-  padding: 10px;
   border-top: 1px solid black;
+  padding: 1rem;
 }
-main .content-headers, main .hush-content-headers, main .craft-content-headers {
+main .hush-content-headers, main .craft-content-headers, main .content-headers, main .hush-container-grid, main .container-grid, main .recipe-grid {
   display: grid;
-  grid-auto-flow: row;
   text-align: center;
   border: 1px solid black;
-  align-items: center;
 }
-main .content-headers div:not(:last-child), main .hush-content-headers div:not(:last-child), main .craft-content-headers div:not(:last-child) {
+main .hush-content-headers div:not(:last-child), main .craft-content-headers div:not(:last-child), main .content-headers div:not(:last-child), main .hush-container-grid div:not(:last-child), main .container-grid div:not(:last-child), main .recipe-grid div:not(:last-child) {
   border-right: 1px solid black;
 }
-main .craft-content-headers {
-  grid-template-columns: repeat(7, minmax(0, 1fr));
+main .hush-content-headers, main .hush-container-grid {
+  grid-template-columns: repeat(3, 1fr);
 }
-main .content-headers {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+main .craft-content-headers, main .recipe-grid {
+  grid-template-columns: repeat(7, 1fr);
 }
-main .hush-content-headers {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+main .content-headers, main .container-grid {
+  grid-template-columns: repeat(4, 1fr);
 }
-main .box {
-  display: grid;
-  grid-auto-flow: row;
+main .hush-container-grid, main .container-grid, main .recipe-grid {
+  border-top: none;
+}
+main .hush-container-grid div, main .container-grid div, main .recipe-grid div {
+  padding: 15px;
 }
 main .hush-container-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  border: 1px solid black;
   border-top: none;
-  font-size: 16px;
-  align-items: center;
-}
-main .hush-container-grid div:first-child {
-  position: relative;
-}
-main .hush-container-grid div:first-child .fa-square-plus {
-  position: absolute;
-  left: 5px;
-}
-main .hush-container-grid div:first-child .fa-square-plus:hover {
-  color: violet;
-  cursor: pointer;
-}
-main .hush-container-grid div:first-child .fa-square-xmark {
-  position: absolute;
-  right: 5px;
-}
-main .hush-container-grid div:first-child .fa-square-xmark:hover {
-  color: violet;
-  cursor: pointer;
-}
-main .hush-container-grid p {
-  width: 350px;
-}
-main .hush-container-grid div {
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
 }
 main .hush-container-grid .book {
-  border-right: 1px solid black;
+  position: relative;
 }
-main .hush-container-grid .skill {
-  border-left: 1px solid black;
+main .hush-container-grid .book .fa-square-plus, main .hush-container-grid .book .fa-square-xmark {
+  position: absolute;
+  top: 0;
+  transition: all 0.07s;
 }
-main .container-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  border-bottom: 1px solid black;
-  align-items: center;
+main .hush-container-grid .book .fa-square-plus:hover, main .hush-container-grid .book .fa-square-xmark:hover {
+  cursor: pointer;
+  color: violet;
 }
-main .container-grid div {
-  text-align: center;
-  border-right: 1px solid black;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+main .hush-container-grid .book .fa-square-plus {
+  top: 40px;
+  left: 10px;
 }
-main .container-grid .book {
-  border-left: 1px solid black;
+main .hush-container-grid .book .fa-square-xmark {
+  top: 40px;
+  right: 10px;
 }
-main .container-grid .skill {
-  border-right: 1px solid black;
-}
-main .recipe-grid {
-  display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
-  border-bottom: 1px solid black;
-  width: 100%;
-  align-items: center;
-}
-main .recipe-grid div {
-  text-align: center;
-  border-right: 1px solid black;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-main .recipe-grid .name {
-  border-left: 1px solid black;
-}
-main .recipe-grid .notes {
-  border-right: 1px solid black;
+main .hush-container-grid .book .flash:hover {
+  color: rgb(101, 2, 143);
 }
 
 footer {
