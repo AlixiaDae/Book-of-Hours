@@ -3,12 +3,11 @@ import Book from "./modules/bookModules/book.js"
 import memoryList from "./modules/memory.js"
 import recipeStorage from "./modules/recipeModules/localRecipes.js"
 import Recipe from "./modules/recipeModules/recipe.js"
-import mainLibrary from "./modules/mainLibraryStorage.js"
+import mainLibraryStorage from "./modules/mainLibraryStorage.js"
 
 //Local Storages
 
 const storage = new Storage("hushhouse")
-const hushStorage = new Storage("hushLibrary")
 
 // DOM Functions
 
@@ -50,7 +49,7 @@ submitBtn.addEventListener("click", (e) => {
     if(skillNameInput.value === "") return
     const newBook = new Book(bookNameInput.value, memoryNameInput.value, skillNameInput.value)
 
-    hushStorage.addBook(newBook)
+    mainLibraryStorage.addBook(newBook)
     if(checkBookIn.checked) storage.addBook(newBook)
     bookNameInput.value = ""
     skillNameInput.value = ""
@@ -197,7 +196,7 @@ function createHushTab(bookObject, box) {
 
     bookName.addEventListener("keydown", (e) => {
         if(e.key === "Enter") {
-            hushStorage.renameBook(bookObject.name, bookName.innerText)
+            main.renameBook(bookObject.name, bookName.innerText)
             e.preventDefault()
             bookName.blur()
         }
@@ -205,7 +204,7 @@ function createHushTab(bookObject, box) {
 
     memoryName.addEventListener("keydown", (e) => {
         if(e.key === "Enter") {
-            hushStorage.renameMemory(bookObject.name, memoryName.innerText.toLowerCase())
+            mainLibraryStorage.renameMemory(bookObject.name, memoryName.innerText.toLowerCase())
             e.preventDefault()
             memoryName.blur()
         }
@@ -213,7 +212,7 @@ function createHushTab(bookObject, box) {
 
     skillName.addEventListener("keydown", (e) => {
         if(e.key === "Enter") {
-            hushStorage.renameSkill(bookObject.name, skillName.innerText)
+            mainLibraryStorage.renameSkill(bookObject.name, skillName.innerText)
             e.preventDefault()
             skillName.blur()
         }
@@ -439,7 +438,7 @@ function sortBookList(tabName) {
             return list
 
     } else {
-            const sortedList = hushStorage.getBooksMenu().books.sort((a,b) => {
+            const sortedList = mainLibraryStorage.getBooksMenu().books.sort((a,b) => {
             let ba = a.name.toLowerCase() 
             let bb = b.name.toLowerCase()
             if(ba < bb) return -1

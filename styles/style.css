@@ -228,6 +228,11 @@ main .hush-container-grid, main .container-grid, main .recipe-grid {
 }
 main .hush-container-grid div, main .container-grid div, main .recipe-grid div {
   padding: 15px;
+  display: flex;
+  justify-content: center;
+}
+main .hush-container-grid div p, main .container-grid div p, main .recipe-grid div p {
+  width: 500px;
 }
 main .hush-container-grid {
   border-top: none;

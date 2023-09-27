@@ -261,6 +261,12 @@ main {
 
         div {
             padding: 15px;
+            display: flex;
+            justify-content: center;
+
+            p {
+                width: 500px;
+            }
         }
     }
 
