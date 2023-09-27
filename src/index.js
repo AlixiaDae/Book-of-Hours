@@ -196,7 +196,7 @@ function createHushTab(bookObject, box) {
 
     bookName.addEventListener("keydown", (e) => {
         if(e.key === "Enter") {
-            main.renameBook(bookObject.name, bookName.innerText)
+            mainLibraryStorage.renameBook(bookObject.name, bookName.innerText)
             e.preventDefault()
             bookName.blur()
         }
