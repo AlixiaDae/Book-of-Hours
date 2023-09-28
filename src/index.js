@@ -10,8 +10,8 @@ import mainLibraryStorage from "./modules/mainLibraryStorage.js"
 const storage = new Storage("hushhouse")
 
 // DOM Functions
-
-const aspectList = ["Lantern", "Forge", "Edge", "Winter", "Heart", "Grail", "Knock", "Rose", "Scale", "Moon", "Sky", "Nectar", "Moth"]
+console.log(memoryList)
+const aspectList = ["Lantern", "Forge", "Edge", "Winter", "Heart", "Grail", "Knock", "Rose", "Scale", "Moon", "Sky", "Nectar", "Moth", "Numen"]
 const workStationList = ["Unsure","Desk with corresponding aspect", "Barber's Chair", "Windlit Workbench", "Morgue", "Glassware", "Foundry", "Morgue", "Dispensary", "Practice Equipment", "Kitchens", "Loom", "Instrument"]
 
 addOptions(memoryList, document.getElementById("memoryName"), "memory")
@@ -108,7 +108,6 @@ const aspectTabs = document.querySelectorAll(".aspect-tab")
 aspectTabs.forEach(tab => 
     tab.addEventListener("click", () => {{
         createHeaders("tabs")
-        const box = document.createElement("div")
         const tabName = tab.textContent
         const list = sortBookList(tabName)
         for(let i = 0; i < list.length; i++) {
@@ -366,7 +365,7 @@ function addOptions(list, element, type) {
 // Sorts books by degree then the memories alphabetically on Aspect tab
 
 function sortBookList(tabName) {
-    if(tabName !== "hush") {
+    if(tabName !== "hush" && tabName !== "numen") {
         const list = []
         const listA = []
         const listB = []
@@ -374,7 +373,6 @@ function sortBookList(tabName) {
         const listD = []
 
         // Creates list that consists of the memories with an aspect that equals to tabName
-
         const memory = memoryList.filter(mem => mem.aspect.includes(tabName.toLowerCase()))
         for(let i = 0; i < storage.getBooksMenu().books.length; i++) {
             const book = storage.getBooksMenu().books[i]
@@ -436,7 +434,6 @@ function sortBookList(tabName) {
             listC.forEach(item => list.push(item))
             listD.forEach(item => list.push(item))
             return list
-
     } else {
             const sortedList = mainLibraryStorage.getBooksMenu().books.sort((a,b) => {
             let ba = a.name.toLowerCase() 

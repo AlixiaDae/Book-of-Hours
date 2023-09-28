@@ -258,15 +258,13 @@ main {
 
     .hush-container-grid, .container-grid, .recipe-grid {
         border-top: none;
+        grid-template-rows: 100%;
 
         div {
-            padding: 15px;
+            padding-left: 50px;
+            padding-right: 50px;
             display: flex;
             justify-content: center;
-
-            p {
-                width: 500px;
-            }
         }
     }
 
