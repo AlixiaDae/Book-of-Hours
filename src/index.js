@@ -10,7 +10,6 @@ import mainLibraryStorage from "./modules/mainLibraryStorage.js"
 const storage = new Storage("hushhouse")
 
 // DOM Functions
-console.log(memoryList)
 const aspectList = ["Lantern", "Forge", "Edge", "Winter", "Heart", "Grail", "Knock", "Rose", "Scale", "Moon", "Sky", "Nectar", "Moth", "Numen"]
 const workStationList = ["Unsure","Desk with corresponding aspect", "Barber's Chair", "Windlit Workbench", "Morgue", "Glassware", "Foundry", "Morgue", "Dispensary", "Practice Equipment", "Kitchens", "Loom", "Instrument"]
 
