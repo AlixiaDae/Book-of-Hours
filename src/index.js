@@ -384,7 +384,7 @@ function sortBookList(tabName) {
                 // ["lantern","foresight"] [1,2] aspect index === degree index
 
                 const index = bookMemory.aspect.findIndex(asp => asp === tabName.toLowerCase())
-                if(bookMemory.degree[index] === 4) {
+                if(bookMemory.degree[index] === 4 || bookMemory.degree[index] === 5) {
                     listD.push(book)
                 } else if(bookMemory.degree[index] === 3) {
                     listC.push(book)
