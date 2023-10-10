@@ -155,6 +155,8 @@ function createHushTab(bookObject, box) {
     container.classList.add("hush-container-grid")
     const addToStorage = document.createElement("span")
     addToStorage.classList.add("fa-solid", "fa-square-plus", "fa-xl")
+    const deleteFromStorage = document.createElement("span")
+    deleteFromStorage.classList.add("fa-solid", "fa-square-minus", "fa-xl")
     const deleteBook = document.createElement("span")
     deleteBook.classList.add("fa-solid", "fa-square-xmark", "fa-xl")
     const bookNameContainer = document.createElement("div")
@@ -173,7 +175,7 @@ function createHushTab(bookObject, box) {
     skillName.setAttribute("contenteditable", "true")
     skillName.textContent = bookObject.skillName
     
-    bookNameContainer.append(bookName, addToStorage, deleteBook)
+    bookNameContainer.append(bookName, addToStorage, deleteFromStorage, deleteBook)
     memoryNameContainer.appendChild(memoryName)
     skillNameContainter.appendChild(skillName)
     container.append(bookNameContainer, memoryNameContainer, skillNameContainter)
@@ -187,8 +189,12 @@ function createHushTab(bookObject, box) {
         storage.addBook(bookObject)
     })
 
+    deleteFromStorage.addEventListener("click", () => {
+        storage.deleteBook(bookObject)
+    })
+
     deleteBook.addEventListener("click", () => {
-        storage.deleteBook(bookName.textContent)
+        mainLibraryStorage.deleteBook(bookName.textContent)
         loadHush()
     })
 

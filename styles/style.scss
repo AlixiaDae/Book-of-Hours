@@ -274,7 +274,7 @@ main {
         .book {
             position: relative;
 
-            .fa-square-plus, .fa-square-xmark {
+            .fa-square-plus, .fa-square-minus, .fa-square-xmark {
                 position: absolute;
                 top: 0;
                 transition: all 0.07s;
@@ -286,12 +286,17 @@ main {
             }
 
             .fa-square-plus {
-                top: 40px;
+                top: 30px;
                 left: 10px;
             }
 
+            .fa-square-minus {
+                top: 30px;
+                left: 35px;
+            }
+
             .fa-square-xmark {
-                top: 40px;
+                top: 30px;
                 right: 10px;
             }
 

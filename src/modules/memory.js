@@ -29,8 +29,13 @@ const winning = memoryFactory("winning move", ["edge"], [3])
 const curious = memoryFactory("curious hunch",["heart", "lantern", "moth", "knock"], [3,3,3,4])
 const old = memoryFactory("old moment", ["lantern", "moth", "scale"], [2,2,4])
 const wistful = memoryFactory("wistful air", ["rose", "sky"], [2,2])
+const savage = memoryFactory("savage hymn", ['scale', 'sky'], [2,2])
 const sun = memoryFactory("numen: the sun's weakness", ['lantern', 'grail', 'moth'], [5,5,5])
+const merciless = memoryFactory("numen: merciless alteration", ['edge', 'forge', 'grail'], [5,5,5])
+const inescapable = memoryFactory("numen: inescapable confinement", ['knock', 'scale', 'winter'], [5,5,5])
 
-const memoryList = [regret, foresight, revelation, satisfaction, solace, cheerful, gossip, beguiling, fear, contradiction, stolen, salt, secret, pattern, intuition, confounding, hindsight, storm, impulse, earth, bittersweet, torgue, nameday, winning, curious, old, wistful, sun]
+
+
+const memoryList = [regret, foresight, revelation, satisfaction, solace, cheerful, gossip, beguiling, fear, contradiction, stolen, salt, secret, pattern, intuition, confounding, hindsight, storm, impulse, earth, bittersweet, torgue, nameday, winning, curious, old, wistful, savage, sun, merciless, inescapable]
 
 export default memoryList
