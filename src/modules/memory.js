@@ -33,9 +33,10 @@ const savage = memoryFactory("savage hymn", ['scale', 'sky'], [2,2])
 const sun = memoryFactory("numen: the sun's weakness", ['lantern', 'grail', 'moth'], [5,5,5])
 const merciless = memoryFactory("numen: merciless alteration", ['edge', 'forge', 'grail'], [5,5,5])
 const inescapable = memoryFactory("numen: inescapable confinement", ['knock', 'scale', 'winter'], [5,5,5])
+const weaving = memoryFactory("numen: weaving the world", ['heart', 'moon', 'nectar'], [5,5,5])
+const lost = memoryFactory("numen: that old lost music", ['rose', 'scale', 'sky'], [5,5,5])
 
 
-
-const memoryList = [regret, foresight, revelation, satisfaction, solace, cheerful, gossip, beguiling, fear, contradiction, stolen, salt, secret, pattern, intuition, confounding, hindsight, storm, impulse, earth, bittersweet, torgue, nameday, winning, curious, old, wistful, savage, sun, merciless, inescapable]
+const memoryList = [regret, foresight, revelation, satisfaction, solace, cheerful, gossip, beguiling, fear, contradiction, stolen, salt, secret, pattern, intuition, confounding, hindsight, storm, impulse, earth, bittersweet, torgue, nameday, winning, curious, old, wistful, savage, sun, merciless, inescapable, weaving, lost]
 
 export default memoryList
