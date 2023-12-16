@@ -36,7 +36,8 @@ const inescapable = memoryFactory("numen: inescapable confinement", ['knock', 's
 const weaving = memoryFactory("numen: weaving the world", ['heart', 'moon', 'nectar'], [5,5,5])
 const lost = memoryFactory("numen: that old lost music", ['rose', 'scale', 'sky'], [5,5,5])
 const counterfeit = memoryFactory("numen: the great counterfeit", ['lantern', 'moon', 'nectar'], [5,5,5])
+const final = memoryFactory("numen: a final understanding", ['rose', 'sky', 'winter'], [5,5,5])
 
-const memoryList = [regret, foresight, revelation, satisfaction, solace, cheerful, gossip, beguiling, fear, contradiction, stolen, salt, secret, pattern, intuition, confounding, hindsight, storm, impulse, earth, bittersweet, torgue, nameday, winning, curious, old, wistful, savage, sun, merciless, inescapable, weaving, lost, counterfeit]
+const memoryList = [regret, foresight, revelation, satisfaction, solace, cheerful, gossip, beguiling, fear, contradiction, stolen, salt, secret, pattern, intuition, confounding, hindsight, storm, impulse, earth, bittersweet, torgue, nameday, winning, curious, old, wistful, savage, sun, merciless, inescapable, weaving, lost, counterfeit, final]
 
 export default memoryList
