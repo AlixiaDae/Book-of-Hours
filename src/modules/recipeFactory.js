@@ -7,7 +7,10 @@ const tisane = recipeFactory("Beverages", "Witching Tisane", "Grail", "N/A", ["O
 const cordials = recipeFactory("Beverages", "Thirza's Cordials", "Nectar", "N/A", ["Herbs and Infusions", "Coil and Chasm",
 "Spices and Savours", "Stone Stories",
 "Orchids & Narcotics"], "Any", ["2 Moth", "2 Grail"])
+
+//Inks
 const yewgall = recipeFactory("Inks", "Yewgall Ink", "Nectar", "N/A", ["Rites of the Roots", "Insects & Nectars", "Leaves & Thorns", "Putrefactions and Calcinations"], "Any", ["2 Nectar"])
+
 
 const recipeList = [tisane, cordials, yewgall]
 export default recipeList

@@ -12,11 +12,9 @@ const storage = new Storage("hushhouse")
 
 // DOM Functions
 const aspectList = ["Lantern", "Forge", "Edge", "Winter", "Heart", "Grail", "Knock", "Rose", "Scale", "Moon", "Sky", "Nectar", "Moth", "Numen"]
-const workStationList = ["Unsure","Desk with corresponding aspect", "Barber's Chair", "Windlit Workbench", "Morgue", "Glassware", "Foundry", "Morgue", "Dispensary", "Practice Equipment", "Kitchens", "Loom", "Instrument"]
 
 addOptions(memoryList, document.getElementById("memoryName"), "memory")
 addOptions(aspectList, document.getElementById("aspectName"), "aspect")
-addOptions(workStationList, document.getElementById("workStation"), "work")
 const contentBox = document.querySelector(".content")
 addOptions(recipeStorage.getRecipesMenu().book.map(i => i.name), document.getElementById("type"), "type")
 
