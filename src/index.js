@@ -4,6 +4,7 @@ import memoryList from "./modules/memory.js"
 import recipeStorage from "./modules/recipeModules/localRecipes.js"
 import Recipe from "./modules/recipeModules/recipe.js"
 import mainLibraryStorage from "./modules/mainLibraryStorage.js"
+import recipeList from "./modules/recipeFactory.js"
 
 //Local Storages
 
@@ -20,9 +21,8 @@ const contentBox = document.querySelector(".content")
 addOptions(recipeStorage.getRecipesMenu().book.map(i => i.name), document.getElementById("type"), "type")
 
 const addBookBtn = document.querySelector(".add-book")
-const addRecipeBtn = document.querySelector(".add-recipe")
+const resetStorageBtn = document.querySelector(".reset")
 const bookFormBox = document.querySelector(".book-form")
-const recipeFormBox = document.querySelector(".recipe-form")
 const submitBtn = document.getElementById("submit")
 const craftListEl = document.querySelector(".craft-list")
 const aspectListEl = document.querySelector(".aspect-list")
@@ -32,9 +32,9 @@ addBookBtn.addEventListener("click", () => {
     bookFormBox.classList.toggle("visible")
 })
 
-addRecipeBtn.addEventListener("click", () => {
-    bookFormBox.classList.remove("visible")
-    recipeFormBox.classList.toggle("visible")
+resetStorageBtn.addEventListener("click", () => {
+    localStorage.removeItem("hushhouse")
+    loadHush()
 })
 
 submitBtn.addEventListener("click", (e) => {
@@ -54,54 +54,6 @@ submitBtn.addEventListener("click", (e) => {
     skillNameInput.value = ""
     loadHush()
 })
-
-const addIngredientsButton = document.getElementById("addIngredients")
-addIngredientsButton.addEventListener("click", () => {
-    addMinusFunction("add", "ingredient")
-})
-
-const minustIngredientsButton = document.getElementById("removeIngredients")
-minustIngredientsButton.addEventListener("click", () => {
-    addMinusFunction("minus", "ingredient")
-})
-
-const addResultsButton = document.getElementById("addResult")
-addResultsButton.addEventListener("click", () => {
-    addMinusFunction("add", "result")
-})
-
-const minusResultsButton = document.getElementById("removeResult")
-minusResultsButton.addEventListener("click", () => {
-    addMinusFunction("minus", "result")
-})
-
-function addMinusFunction(buttonType, inputLabel) {
-    if(buttonType === "add") {
-        if(inputLabel === "ingredient") {
-            const inputBox = document.querySelector(".ingredient-inputs")
-            const input = document.createElement("input")
-            input.setAttribute("name", "ingredients")
-            input.id = `ingredient-${inputBox.childElementCount+1}`
-            inputBox.appendChild(input)
-        } else {
-            const inputBox = document.querySelector(".result-inputs")
-            const input = document.createElement("input")
-            input.setAttribute("name", "result")
-            input.id = `result-${inputBox.childElementCount+1}`
-            inputBox.appendChild(input)
-        }
-    } else if(buttonType === "minus") {
-        if(inputLabel === "ingredient") {
-            const inputBox = document.querySelector(".ingredient-inputs")
-            if(inputBox.childElementCount === 1) return
-            inputBox.removeChild(inputBox.lastChild)
-        } else {
-            const inputBox = document.querySelector(".result-inputs")
-            if(inputBox.childElementCount === 1) return
-            inputBox.removeChild(inputBox.lastChild)
-        }
-    }
-}
 
 const aspectTabs = document.querySelectorAll(".aspect-tab")
 aspectTabs.forEach(tab => 
@@ -155,8 +107,7 @@ function createHushTab(bookObject, box) {
     container.classList.add("hush-container-grid")
     const addToStorage = document.createElement("span")
     addToStorage.classList.add("fa-solid", "fa-square-plus", "fa-xl")
-    const deleteFromStorage = document.createElement("span")
-    deleteFromStorage.classList.add("fa-solid", "fa-square-minus", "fa-xl")
+    
     const deleteBook = document.createElement("span")
     deleteBook.classList.add("fa-solid", "fa-square-xmark", "fa-xl")
     const bookNameContainer = document.createElement("div")
@@ -175,7 +126,7 @@ function createHushTab(bookObject, box) {
     skillName.setAttribute("contenteditable", "true")
     skillName.textContent = bookObject.skillName
     
-    bookNameContainer.append(bookName, addToStorage, deleteFromStorage, deleteBook)
+    bookNameContainer.append(bookName, addToStorage, deleteBook)
     memoryNameContainer.appendChild(memoryName)
     skillNameContainter.appendChild(skillName)
     container.append(bookNameContainer, memoryNameContainer, skillNameContainter)
@@ -187,10 +138,6 @@ function createHushTab(bookObject, box) {
 
     addToStorage.addEventListener("click", () => {
         storage.addBook(bookObject)
-    })
-
-    deleteFromStorage.addEventListener("click", () => {
-        storage.deleteBook(bookObject)
     })
 
     deleteBook.addEventListener("click", () => {
@@ -235,48 +182,36 @@ recipeTabs.forEach(tab =>
     tab.addEventListener("click", () => {
         createHeaders("recipe")
         const tabName = tab.textContent
-        const list = recipeStorage.getRecipesMenu().book
-        for(let i = 0; i < list.length; i++) {
-            createCraftTab(list[i], tabName, contentBox)
-        }
-        
+        createCraftTab(recipeList, tabName, contentBox)
     })
 )
 
 function createCraftTab(typeObject, tabName, box) {
-    if(typeObject.name === tabName) {
-        const list = typeObject.recipes
-        list.sort((a, b) => {
-            if(a.name < b.name) return -1
-            if(a.name > b.name) return 1
-            return 0
-        })
-
-        for(let i = 0; i < list.length; i++) {
+    for(let i = 0; i < typeObject.length; i++) {
+        if(typeObject[i].type === tabName) {
             const container = document.createElement("div")
             container.classList.add("recipe-grid")
             const name = document.createElement("div")
             name.classList.add("name")
-            name.textContent = list[i].name
+            name.textContent = typeObject[i].name
             const aspect = document.createElement("div")
-            aspect.textContent = list[i].aspect
+            aspect.textContent = typeObject[i].aspect
             const work = document.createElement("div")
-            work.textContent = list[i].workstation
+            work.textContent = typeObject[i].workstation
             const skill = document.createElement("div")
-            skill.textContent = list[i].skill
+            skill.textContent = typeObject[i].skill.join(", ")
             const ingredient = document.createElement("div")
-            ingredient.textContent = list[i].ingredients.join(", ")
             const result = document.createElement("div")
-            result.textContent = list[i].result.join(", ")
+            result.textContent = typeObject[i].result.join(", ")
             const notes = document.createElement("div")
             notes.classList.add("notes")
-            notes.textContent = list[i].notes
+            notes.textContent = typeObject[i].notes
             container.append(name, aspect, work, skill, ingredient, result, notes)
             box.appendChild(container)
         }
-        
     }
 }
+
 
 function createHeaders(tabType) {
     if(tabType === "tabs") {
@@ -349,21 +284,10 @@ function addOptions(list, element, type) {
             option.setAttribute("value", name)
             element.appendChild(option)
         }
-    }  else {
-        const sortedList = list.sort((a,b) => {
-            if(a < b) return -1
-            if(a > b) return 1
-            return 0
-        })
-        for(let i = 0; i < sortedList.length; i++) {
-            const option = document.createElement("option")
-            option.textContent = sortedList[i]
-            option.setAttribute("value", sortedList[i])
-            element.appendChild(option)
-        }
-    }
+    } 
     
 }
+
 
 // Util function for sorting books
 // Sorts books alphabetically on Hush House tab
@@ -462,39 +386,3 @@ function flash(e) {
 
 //TEMP TODO ADD RECIPES
 
-const createRecipeBtn = document.getElementById("submitRecipe")
-
-createRecipeBtn.addEventListener("click", (e) => {
-    e.preventDefault()
-    const typeName = document.getElementById("type")
-    const name = document.getElementById("recipeName")
-    const skill = document.getElementById("skillToCraft")
-    const workStation = document.getElementById("workStation")
-    const aspect = document.getElementById("aspectName")
-    const notes = document.getElementById("notes")
-    const ingredients = document.querySelectorAll(".ingredient-inputs input")
-    const results = document.querySelectorAll(".result-inputs input")
-    const iList = []
-    const rList = []
-    ingredients.forEach(el => 
-        iList.push(el.value)
-    )
-    results.forEach(el => 
-        rList.push(el.value)
-    )
-    
-    if(name.value === "") return
-    if(skill.value === "") return
-    if(iList.length < 0) return
-    if(rList.length < 0) return
-
-    const newRecipe = new Recipe(name.value, aspect.value, iList, skill.value, workStation.value, rList, notes.value)
-
-    recipeStorage.addRecipe(typeName.value, newRecipe)
-    name.value = ""
-    skill.value = ""
-    ingredients.forEach(i => i.value = "")
-    results.forEach(i => i.value = "")
-    notes.value = ""
-    recipeFormBox.classList.remove("visible")
-})

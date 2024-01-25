@@ -13,8 +13,8 @@
 <body>
     <header>
         <h1>Book of Hours</h1>
-        <button class="add-recipe">Add Recipe</button>
         <button class="add-book">Add Book</button>
+        <button class="reset">Reset Storage</button>
     </header>
     <main>
             <form class="book-form">
@@ -38,47 +38,6 @@
                 </fieldset>
             </form>
         
-        <div class="recipe-form-box">
-            <form class="recipe-form">
-                <fieldset>
-                    <legend>New Recipe</legend>
-                    <label for="type">Recipe Type:</label>
-                    <select name="type" id="type"></select>
-                    <label for="recipeName">Recipe Name:</label>
-                    <input type="text" name="recipeName" id="recipeName">
-                    <label for="skillToCraft">Skill Name:</label>
-                    <input type="text" name="skillToCraft" id="skillToCraft">
-
-                    <label for="workStation">Workstation:</label>
-                    <select name="station" id="workStation"></select>
-
-                    <div class="ingredients-input-box">
-                        <div class="add-ingredients-buttons"><span id="addIngredients" class="fa-solid fa-square-plus"></span> <span id="removeIngredients" class="fa-solid fa-square-minus"></span></div>
-                        <label for="ingredients">Ingredients</label>
-                        <div class="ingredient-inputs">
-                            <input type="text" name="ingredients" id="ingredients">
-                        </div>
-                    </div>
-                    <label for="aspectName">Main Aspect:</label>
-                    <select name="aspect" id="aspectName">
-                    </select>
-
-                    <div class="results-input-box">
-                        <div class="add-result-buttons"><span id="addResult" class="fa-solid fa-square-plus"></span> <span id="removeResult" class="fa-solid fa-square-minus"></span></div>
-                        <label for="result">Result:</label>
-                        <div class="result-inputs">
-                            <input type="text" name="result" id="result">
-                        </div>
-                    </div>
-
-                    <label for="notes">Extra Notes</label>
-                    <textarea name="notes" id="notes" cols="30" rows="2"></textarea>
-
-                    <button id="submitRecipe">Create Recipe</button>
-                    
-                </fieldset>
-            </form>
-        </div>
         <div class="main-nav">
             <nav>
                 <ul>
