@@ -75,7 +75,6 @@ header {
 }
 
 
-
 main {
     border-top: 1px solid;
     position: relative;
@@ -122,99 +121,10 @@ main {
         }
     }
 
-    .recipe-form-box {
-        form {
-            display: none;
-            position: absolute;
-            top: 100px;
-            left: 43%;
-            z-index: 3;
-            background-color: whitesmoke;
-            border: 1px solid black;
-            padding: .3rem;
-
-            fieldset {
-                height: 100%;
-                text-align: left;
-                border: none;
-                gap: 3px;
-                @include flexCenter(column, "", "");
-
-                legend {
-                    font-size: 1.2rem;
-                    font-weight: bold;
-                    margin-left: -4px;
-                }
-
-                label[for="type"] {
-                    margin-top: -5px;
-                }
-
-                .ingredients-input-box {
-                    position: relative;
-                    .add-ingredients-buttons {
-                        position: absolute;
-                        top: 0;
-                        right: 5px;
-    
-                        span:hover {
-                            color: violet;
-                            cursor: pointer;
-                        }
-                    }
-                    .ingredient-inputs {
-                        gap: 5px;
-                        @include flexCenter(column, "", "")
-                    }
-                }
-
-                .results-input-box {
-                    position: relative;
-
-                    .add-result-buttons {
-                        position: absolute;
-                        top: 0;
-                        right: 5px;
-
-                        span:hover {
-                            color: violet;
-                            cursor: pointer;
-                        }
-                    }
-
-                    .result-inputs {
-                        gap: 5px;
-                        @include flexCenter(column, "", "")
-                    }
-                }
-
-                #notes {
-                    resize: none;
-                }
-                
-                #submitRecipe {
-                    margin-top: 5px;
-                    padding: .4rem;
-                }
-
-                select {
-                    padding: .2rem;
-                }
-
-                
-            }
-    
-        }
-        
-        .visible {
-            display: block;
-           
-        }
-    }
-
     .aspect-list, .craft-list {
         display: none;
         border-top: 1px solid black;
+        min-width: fit-content;
 
         li:not(:last-child) {
             border-right: 1px solid black;
@@ -238,6 +148,8 @@ main {
         display: grid;
         text-align: center;
         border: 1px solid black;
+        overflow: hidden;
+        min-width: fit-content;
 
         div:not(:last-child) {
             border-right: 1px solid black;
@@ -245,25 +157,35 @@ main {
     }
 
     .hush-content-headers, .hush-container-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
     }
 
     .craft-content-headers, .recipe-grid {
-        grid-template-columns: repeat(7, 1fr);
+        grid-template-columns: repeat(6, minmax(170px, 1fr));
     }
 
     .content-headers, .container-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(4, minmax(300px, 1fr));
     }
 
     .hush-container-grid, .container-grid, .recipe-grid {
         border-top: none;
         grid-template-rows: 100%;
+    }
+
+    .hush-container-grid, .container-grid {
 
         div {
             padding-left: 50px;
             padding-right: 50px;
             display: flex;
+            justify-content: center;
+        }
+    }
+
+    .recipe-grid {
+        div {
+            padding: .5rem;
             justify-content: center;
         }
     }

@@ -110,88 +110,11 @@ main .book-form fieldset #submit {
 main .book-form .visible {
   display: block;
 }
-main .recipe-form-box form {
-  display: none;
-  position: absolute;
-  top: 100px;
-  left: 43%;
-  z-index: 3;
-  background-color: whitesmoke;
-  border: 1px solid black;
-  padding: 0.3rem;
-}
-main .recipe-form-box form fieldset {
-  height: 100%;
-  text-align: left;
-  border: none;
-  gap: 3px;
-  display: flex;
-  flex-direction: column;
-  justify-content: "";
-  align-items: "";
-}
-main .recipe-form-box form fieldset legend {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-left: -4px;
-}
-main .recipe-form-box form fieldset label[for=type] {
-  margin-top: -5px;
-}
-main .recipe-form-box form fieldset .ingredients-input-box {
-  position: relative;
-}
-main .recipe-form-box form fieldset .ingredients-input-box .add-ingredients-buttons {
-  position: absolute;
-  top: 0;
-  right: 5px;
-}
-main .recipe-form-box form fieldset .ingredients-input-box .add-ingredients-buttons span:hover {
-  color: violet;
-  cursor: pointer;
-}
-main .recipe-form-box form fieldset .ingredients-input-box .ingredient-inputs {
-  gap: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: "";
-  align-items: "";
-}
-main .recipe-form-box form fieldset .results-input-box {
-  position: relative;
-}
-main .recipe-form-box form fieldset .results-input-box .add-result-buttons {
-  position: absolute;
-  top: 0;
-  right: 5px;
-}
-main .recipe-form-box form fieldset .results-input-box .add-result-buttons span:hover {
-  color: violet;
-  cursor: pointer;
-}
-main .recipe-form-box form fieldset .results-input-box .result-inputs {
-  gap: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: "";
-  align-items: "";
-}
-main .recipe-form-box form fieldset #notes {
-  resize: none;
-}
-main .recipe-form-box form fieldset #submitRecipe {
-  margin-top: 5px;
-  padding: 0.4rem;
-}
-main .recipe-form-box form fieldset select {
-  padding: 0.2rem;
-}
-main .recipe-form-box .visible {
-  display: block;
-}
 main .aspect-list, main .craft-list {
   display: none;
   border-top: 1px solid black;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
 }
 main .aspect-list li:not(:last-child), main .craft-list li:not(:last-child) {
   border-right: 1px solid black;
@@ -210,27 +133,34 @@ main .hush-content-headers, main .craft-content-headers, main .content-headers, 
   display: grid;
   text-align: center;
   border: 1px solid black;
+  overflow: hidden;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
 }
 main .hush-content-headers div:not(:last-child), main .craft-content-headers div:not(:last-child), main .content-headers div:not(:last-child), main .hush-container-grid div:not(:last-child), main .container-grid div:not(:last-child), main .recipe-grid div:not(:last-child) {
   border-right: 1px solid black;
 }
 main .hush-content-headers, main .hush-container-grid {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
 }
 main .craft-content-headers, main .recipe-grid {
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(6, minmax(170px, 1fr));
 }
 main .content-headers, main .container-grid {
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(300px, 1fr));
 }
 main .hush-container-grid, main .container-grid, main .recipe-grid {
   border-top: none;
   grid-template-rows: 100%;
 }
-main .hush-container-grid div, main .container-grid div, main .recipe-grid div {
+main .hush-container-grid div, main .container-grid div {
   padding-left: 50px;
   padding-right: 50px;
   display: flex;
+  justify-content: center;
+}
+main .recipe-grid div {
+  padding: 0.5rem;
   justify-content: center;
 }
 main .hush-container-grid {

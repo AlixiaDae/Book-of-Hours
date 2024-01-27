@@ -195,16 +195,26 @@ function createCraftTab(typeObject, tabName, box) {
             const aspect = document.createElement("div")
             aspect.textContent = typeObject[i].aspect
             const work = document.createElement("div")
-            work.textContent = typeObject[i].workstation
+            if(Array.isArray(typeObject[i].workstation)) {
+                work.textContent = typeObject[i].workstation.join(", ")
+            } else {
+                work.textContent = typeObject[i].workstation
+            }
             const skill = document.createElement("div")
             skill.textContent = typeObject[i].skill.join(", ")
-            const ingredient = document.createElement("div")
+            const ingredients = document.createElement("div")
+            if(Array.isArray(typeObject[i].ingredients)) {
+                ingredients.textContent = typeObject[i].ingredients.join(", ")
+            } else {
+                ingredients.textContent = typeObject[i].ingredients
+            }
             const result = document.createElement("div")
-            result.textContent = typeObject[i].result.join(", ")
-            const notes = document.createElement("div")
-            notes.classList.add("notes")
-            notes.textContent = typeObject[i].notes
-            container.append(name, aspect, work, skill, ingredient, result, notes)
+            if(Array.isArray(typeObject[i].result)) {
+                result.textContent = typeObject[i].result.join(", ")
+            } else {
+                result.textContent = typeObject[i].result
+            }
+            container.append(name, aspect, work, skill, ingredients, result)
             box.appendChild(container)
         }
     }
@@ -256,10 +266,8 @@ function createHeaders(tabType) {
         ingredients.textContent = "Ingredients"
         const results = document.createElement("div")
         results.textContent = "Aspects given"
-        const notes = document.createElement("div")
-        notes.textContent = "Additional Notes"
 
-        header.append(rName, aspect, work, skillName, ingredients, results,notes)
+        header.append(rName, aspect, work, skillName, ingredients, results)
         contentBox.appendChild(header)
     }
 }
