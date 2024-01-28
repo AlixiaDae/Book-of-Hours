@@ -201,7 +201,11 @@ function createCraftTab(typeObject, tabName, box) {
                 work.textContent = typeObject[i].workstation
             }
             const skill = document.createElement("div")
-            skill.textContent = typeObject[i].skill.join(", ")
+            if(Array.isArray(typeObject[i].skill)) {
+                skill.textContent = typeObject[i].skill.join(", ")
+            } else {
+                skill.textContent = typeObject[i].skill
+            }
             const ingredients = document.createElement("div")
             if(Array.isArray(typeObject[i].ingredients)) {
                 ingredients.textContent = typeObject[i].ingredients.join(", ")
@@ -214,7 +218,13 @@ function createCraftTab(typeObject, tabName, box) {
             } else {
                 result.textContent = typeObject[i].result
             }
-            container.append(name, aspect, work, skill, ingredients, result)
+            const notes = document.createElement("div")
+            if(Array.isArray(typeObject[i].notes)) {
+                notes.textContent = typeObject[i].notes.join(", ")
+            } else {
+                notes.textContent = typeObject[i].notes
+            }
+            container.append(name, aspect, work, skill, ingredients, result, notes)
             box.appendChild(container)
         }
     }
@@ -266,8 +276,10 @@ function createHeaders(tabType) {
         ingredients.textContent = "Ingredients"
         const results = document.createElement("div")
         results.textContent = "Aspects given"
+        const notes = document.createElement("div")
+        notes.textContent = "Additional notes"
 
-        header.append(rName, aspect, work, skillName, ingredients, results)
+        header.append(rName, aspect, work, skillName, ingredients, results, notes)
         contentBox.appendChild(header)
     }
 }

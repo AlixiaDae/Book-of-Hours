@@ -1,5 +1,5 @@
-const recipeFactory = (type, name, aspect, ingredients, skill, workstation, result) => {
-    return { type, name, aspect, ingredients, skill, workstation, result}
+const recipeFactory = (type, name, aspect, ingredients, skill, workstation, result, notes) => {
+    return { type, name, aspect, ingredients, skill, workstation, result, notes }
 }
 
 //Beverages
@@ -31,5 +31,37 @@ const orpiment = recipeFactory("Inks", "Orpiment Exultant", "Forge", "Iotic Esse
 const porphyrine = recipeFactory("Inks", "Porphyrine", "Rose", "Ichor Auroral", ["Auroral Contemplations", "Inks of Revelation", "Inks of Power", "Pearl and Tide", "Sand Stories"], ["Glassware", "Rowenarium", "Loggia"], ["7 Knock", "7 Moon", "7 Rose"])
 const uzult = recipeFactory("Inks", "Uzult", "Lantern", "Xanthotic Essence", ["Inks of Revelation", "Sacra Solis Invicti", "Watchman's Paradoxes", "Glaziery and Lightsmithing", "Anbary and Lapidary"], ["Glassware", "Dispensary", "Foundry"], ["7 Lantern", "7 Moth", "7 Sky"])
 
-const recipeList = [tisane, cordials, eigengrau, rubywise, yewgall, solomon, leathy, ascite, calcite, malachite, serpent, skinshuck, perhibiate, stargall, catwink, perinculate, asimel, houndsgall, ashartine, marakat, nillycant, orpiment, porphyrine, uzult]
+//Memories
+const thunderskin = recipeFactory("Memories", "Thunderskin's Paean", "Heart", "10 Heart", ["Drums and Dances", "Strings and Songs"], "Instrument", ["Scale", "Grail", "Heart 4"], "Evolve via Preservation")
+const nameday = recipeFactory("Memories", "Nameday Riddle", "Moth", ["10 Moth", "Memory"], ["Sacra Limiae", "Edicts Liminal", "Solutions and Separations", "Rites of the Roots", "Weaving and Knotworking"], "Any", ["2 Knock", "3 Moth"])
+const moment = recipeFactory("Memories", "Old Moment", "Scale", "10 Lantern or 10 Scale", ["Disciplines of the Scar", "Wolf Stories", "Coil and Chasm", "Horns and Ivories", "Path and Pilgrim"], "Any", ["2 Moth", "2 Lantern", "4 Scale"], ["Can be obtained from Living Relic and Year-Tally", "Evolve via Preservation"])
+const torgue = recipeFactory("Memories", "Torgue's Cleansing", "Edge", "5 Edge", ["Auroral Contemplations", "Disciplines of the Scar", "Meniscate Reflections", "Purifications and Exaltations", "Sharps"], "Any", "2 Edge")
+const winning = recipeFactory("Memories", "Winning Move", "Edge", ["10 Edge", "Memory"], ["Sharps", "Disciplines of the Hammer", "Ragged Crossroads", "Auroral Contemplations"], "Any", "3 Edge", "Evolve via Illumination")
+const ascendant = recipeFactory("Memories", "Ascendant Harmony", "Sky", "10 Sky", ["Applebright Euphonies", "Bells and Brazieries", "Furs and Feathers", "Purifications and Exaltations", "Sky Stories", "Strings and Songs"], "Instrument", ["2 Lantern", "4 Sky"], "Evolve via Birdsong")
+const curious = recipeFactory("Memories", "Curious Hunch", "Knock", ["10 Knock", "Memory"], ["Preliminal Meter", "The Great Signs and the Great Scars"], "Any", ["3 Moth", "3 Lantern", "3 Heart", "4 Knock"], ["Evolve via Nyctodromy", "Sea's Edge in numa", "Persistent"])
+const didumos = recipeFactory("Memories", "Didumos", "Sky", ["15 Sky", "Ascendant Harmony"], ["Ouranoscopy", "Sights and Sensations", "Bells and Brazieries", "Applebright Euphonies", "Sacra Limiae"], "Any", ["3 Winter", "3 Knock", "3 Lantern", "Sky 6"], ["Evolve via Horomachistry", "Evolve via Hushery", "Persistent"])
+const earth = recipeFactory("Memories", "Earth-Sign", "Nectar", "N/A", ["De Ratio Quercuum", "Rapt in the King"], "Any", ["2 Scale", "2 Nectar"], ["Evolve via Skolekosophy", "Walk on the moor in numa", "Persistent", "Viper or Spider"])
+const quake = recipeFactory("Memories", "Earthquake-name", "Scale", ["15 Scale","15 Lantern(Disciplines of the Scar)", "Old Moment"], ["Coil and Chasm", "Hill and Hollow", "Stone Stories", "Wolf Stories", "Disciplines of the Scar"], "Any", ["3 Forge", "6 Scale"], "Persistent")
+const enduring = recipeFactory("Memories", "Eduring Reflection", "Rose", ["10 Rose", "Memory"], ["Pearl and Tide", "Preliminal Meter", "Path and Pilgrim"], "Any", ["1 Heart", "1 Knock", "3 Rose"], ["Evolve via Nyctodromy", "Persistent", "Moor or Sea Caves in numa"])
+const forbidden = recipeFactory("Memories", "Forbidden Epic", "Edge", ["15 Moon", "Confounding Parable"], "Edicts Martial", "Any", ["4 Moon", "4 Rose", "6 Edge"], ["Evolve via Horomachistry", "Evolve via Birdsong"])
+const hive = recipeFactory("Memories", "Hive's Lament", "Nectar", "10 Nectar", "Drums and Dances", "Instrument", ["2 Moth", "2 Winter", "4 Nectar"], ["Evolve via Bosk", "Persistent"])
+const horizon = recipeFactory("Memories", "Horizon-Sight", "Rose", ["15 Rose", "Enduring Reflection"], ["Path and Pilgrim", "Preliminal Meter", "Sand Stories", "Sky Stories"], "Any", "Rose 4", ["Evolve via Hushery", "Persistent", "Stymphling", "Gull Colony in numa"])
+const invincible = recipeFactory("Memories", "Invincible Audacity", "Edge", ["15 Edge", "Winning Move"], ["Auroral Contemplations", "Disciplines of the Hammer", "Edicts Martial"], "Any", ["3 Forge", "3 Lantern", "6 Edge"], ["Evolve via Illumination", "Evolve via Ithastry", "Persistent"])
+const occult = recipeFactory("Memories", "Occult Scrap", "Rose", "N/A", "Yellowing Newspaper", "Any", ["2 Knock", "2 Moth", "2 Rose"], "Persistent")
+const wound = recipeFactory("Memories", "Old Wound", "Moon", "5 Moon", "Edicts Martial", "Any", ["1 Edge", "2 Moon", "3 Winter"], "Persistent")
+const wind = recipeFactory("Memories", "Wind-in-Waiting", "Sky", ["15 Sky", "Mazarine Fife"], ["Strings and Songs", "Sky Stories", "Sacra Solis Invicti","Furs and Feathers"], ["Gullscry", "Hermit", "Ambrose", "Reading Room", "Pale", "Telescope"], ["3 Moth", "3 Grail", "3 Scale", "6 Sky"], ["Evolve via Bosk", "Evolve via Birdsong", "Persistent"])
+const wormwood = recipeFactory("Memories", "Womrwood Dream", "Winter", ["10 Moon(Edicts Martial)", "Memory(Edicts Martial)","15 Moon", "Stymphling"], ["Edicts Martial", "Edicts Inviolable", "Rhyme and Remembrance", "Snow Stories", "Wolf Stories", "Sickle and Eclipse"], "Any", ["3 Edge", "6 Moon", "6 Winter"], ["Evolve via Skolekosophy", "Evolve via Nyctodromy", "Persistent"])
+
+// Tool
+const mazarine = recipeFactory("Devices", "Mazarine Fife", "Sky", ["10 Sky", "Wood"], ["Ouranoscopy", "Sacra Limiae", "Sacra Solis Invicti"], ["Gullscry", "Hermit", "Solar Altar"], "3 Sky", "Instrument")
+const chronsichord = recipeFactory("Devices", "Chronsichord", "Knock", ["15 Knock", "Gervinite", "15 Sky(Lockworks)", "Silver Wire(Lockworks)"], ["Lockworks and Clockworks", "Preliminal Meter", "Glassblowing and Vesselcrafting", "The Great Signs and the Great Scars", "Glaziery and Lightsmithing"], "Any", ["Forge", "3 Winter", "6 Sky", "6 Knock"])
+const mommet = recipeFactory("Devices", "Pale Mommet", "Grail", ["10 Grail", "Fabric"], ["Pentiments and Precursors", "Resurgences and Emergences", "Sea Stories", "The Great Signs and the Great Scars", "Tridesma Hiera"], "Loom in Servants' Hall", ["2 Heart", "2 Moth", "4 Grail"])
+const flushed = recipeFactory("Devices", "Flushed Mommet", "Grail", ["15 Grail", "Pale Mommet"], ["Pentiments and Precursors", "The Great Signs and the Great Scars", "Desires and Dissolutions", "Resurgences and Emergences", "Furs and Feathers"], "Any", ["3 Moth", "3 Heart", "6 Grail"])
+const dearday = recipeFactory("Devices", "Dearday Lens", "Lantern", "5 Lantern or 5 Sky(Glassblowing and Glaziery)", ["Glaziery and Lightsmithing", "Pyroglyphics", "Disciplines of the Scar", "Glassblowing and Vesselcrafting"], "Mainly Telescope", ["Forge", "Edge", "2 Sky", "2 Lantern"])
+
+//Material 
+const gervinite = recipeFactory("Materials", "Gervinite", "Knock", ["10 Knock", "Glass", "10 Sky(Glaziery)", "Metal(Glaziery)"], ["Lockworks and Clockworks", "Glaziery and Lightsmithing"], ["Dispensary(Lockworks)", "Any that accepts metal"], ["2 Rose", "4 Knock"], ["Found in Our Lady Beneath", "In weighty bedside candleholder"])
+
+
+const recipeList = [tisane, cordials, eigengrau, rubywise, yewgall, solomon, leathy, ascite, calcite, malachite, serpent, skinshuck, perhibiate, stargall, catwink, perinculate, asimel, houndsgall, ashartine, marakat, nillycant, orpiment, porphyrine, uzult, thunderskin, nameday, forbidden, moment, torgue, winning, ascendant, curious, didumos, earth, quake, enduring, hive, horizon, invincible, occult, wound, wind, wormwood, mazarine, chronsichord, mommet, flushed, dearday]
 export default recipeList
