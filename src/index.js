@@ -11,10 +11,6 @@ import recipeList from "./modules/recipeFactory.js"
 const storage = new Storage("hushhouse")
 
 // DOM Functions
-const aspectList = ["Lantern", "Forge", "Edge", "Winter", "Heart", "Grail", "Knock", "Rose", "Scale", "Moon", "Sky", "Nectar", "Moth", "Numen"]
-
-addOptions(memoryList, document.getElementById("memoryName"), "memory")
-addOptions(aspectList, document.getElementById("aspectName"), "aspect")
 const contentBox = document.querySelector(".content")
 addOptions(recipeStorage.getRecipesMenu().book.map(i => i.name), document.getElementById("type"), "type")
 
@@ -402,5 +398,33 @@ function flash(e) {
     }, 0.03)
 }
 
-//TEMP TODO ADD RECIPES
+//Click an aspect tab
+//Remove active class from other tabs
+//Change the clicked tab to an active tab
+
+aspectTabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+        setActiveButton(tab)
+    })
+})
+
+function setActiveButton(button) {
+    aspectTabs.forEach(button => {
+        if(button !== this) {
+            button.classList.remove("active")
+        }
+    })
+    button.classList.add("active")
+}
+
+hushTab.addEventListener("click", () => [
+    aspectTabs.forEach(tab => 
+        tab.classList.remove("active"))
+])
+
+craftTab.addEventListener("click", () => {
+    aspectTabs.forEach(tab => {
+        tab.classList.remove("active")
+    })
+})
 

@@ -119,6 +119,94 @@ main .aspect-list, main .craft-list {
 main .aspect-list li:not(:last-child), main .craft-list li:not(:last-child) {
   border-right: 1px solid black;
 }
+main .aspect-list li:first-child:hover {
+  background-color: yellow;
+}
+main .aspect-list li:first-child.active {
+  background-color: yellow;
+}
+main .aspect-list li:nth-child(2):hover {
+  background-color: orange;
+}
+main .aspect-list li:nth-child(2).active {
+  background-color: orange;
+}
+main .aspect-list li:nth-child(3):hover {
+  background-color: rgb(157, 241, 31);
+}
+main .aspect-list li:nth-child(3).active {
+  background-color: rgb(157, 241, 31);
+}
+main .aspect-list li:nth-child(4):hover {
+  background-color: rgb(193, 240, 255);
+}
+main .aspect-list li:nth-child(4).active {
+  background-color: rgb(193, 240, 255);
+}
+main .aspect-list li:nth-child(5):hover {
+  background-color: pink;
+}
+main .aspect-list li:nth-child(5).active {
+  background-color: pink;
+}
+main .aspect-list li:nth-child(6):hover {
+  background-color: red;
+  color: whitesmoke;
+}
+main .aspect-list li:nth-child(6).active {
+  background-color: red;
+  color: whitesmoke;
+}
+main .aspect-list li:nth-child(7):hover {
+  background-color: purple;
+  color: whitesmoke;
+}
+main .aspect-list li:nth-child(7).active {
+  background-color: purple;
+  color: whitesmoke;
+}
+main .aspect-list li:nth-child(8):hover {
+  background-color: violet;
+}
+main .aspect-list li:nth-child(8).active {
+  background-color: violet;
+}
+main .aspect-list li:nth-child(9):hover {
+  background-color: rgb(155, 84, 2);
+  color: whitesmoke;
+}
+main .aspect-list li:nth-child(9).active {
+  background-color: rgb(155, 84, 2);
+  color: whitesmoke;
+}
+main .aspect-list li:nth-child(10):hover {
+  background-color: rgb(238, 222, 253);
+}
+main .aspect-list li:nth-child(10).active {
+  background-color: rgb(238, 222, 253);
+}
+main .aspect-list li:nth-child(11):hover {
+  background-color: blue;
+  color: whitesmoke;
+}
+main .aspect-list li:nth-child(11).active {
+  background-color: blue;
+  color: whitesmoke;
+}
+main .aspect-list li:nth-child(12):hover {
+  background-color: green;
+  color: whitesmoke;
+}
+main .aspect-list li:nth-child(12).active {
+  background-color: green;
+  color: whitesmoke;
+}
+main .aspect-list li:nth-child(13):hover {
+  background-color: rgb(245, 245, 245);
+}
+main .aspect-list li:nth-child(13).active {
+  background-color: rgb(245, 245, 245);
+}
 main .visible {
   display: flex;
 }

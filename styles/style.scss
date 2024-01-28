@@ -131,6 +131,98 @@ main {
         }
     }
 
+    .aspect-list {
+
+        li:first-child:hover {
+            background-color: yellow;
+        }
+        li:first-child.active {
+            background-color: yellow;
+        }
+        li:nth-child(2):hover {
+            background-color: orange;
+        }
+        li:nth-child(2).active {
+            background-color: orange;
+        }
+        li:nth-child(3):hover {
+            background-color: rgb(157, 241, 31);
+        }
+        li:nth-child(3).active {
+            background-color: rgb(157, 241, 31);
+        }
+        li:nth-child(4):hover {
+            background-color: rgb(193, 240, 255);
+        }
+        li:nth-child(4).active {
+            background-color: rgb(193, 240, 255);
+        }
+        li:nth-child(5):hover {
+            background-color: pink;
+        }
+        li:nth-child(5).active {
+            background-color: pink;
+        }
+        li:nth-child(6):hover {
+            background-color: red;
+            color: whitesmoke;
+        }
+        li:nth-child(6).active {
+            background-color: red;
+            color: whitesmoke;
+        }
+        li:nth-child(7):hover {
+            background-color: purple;
+            color: whitesmoke;
+        }
+        li:nth-child(7).active {
+            background-color: purple;
+            color: whitesmoke;
+        }
+        li:nth-child(8):hover {
+            background-color: violet;
+        }
+        li:nth-child(8).active {
+            background-color: violet;
+        }
+        li:nth-child(9):hover {
+            background-color: rgb(155, 84, 2);
+            color: whitesmoke;
+        }
+        li:nth-child(9).active {
+            background-color: rgb(155, 84, 2);
+            color: whitesmoke;
+        }
+        li:nth-child(10):hover {
+            background-color: rgb(238, 222, 253);
+        }
+        li:nth-child(10).active {
+            background-color: rgb(238, 222, 253);
+        }
+        li:nth-child(11):hover {
+            background-color: blue;
+            color: whitesmoke;
+        }
+        li:nth-child(11).active {
+            background-color: blue;
+            color: whitesmoke;
+        }
+        li:nth-child(12):hover {
+            background-color: green;
+            color: whitesmoke;
+        }
+        li:nth-child(12).active {
+            background-color: green;
+            color: whitesmoke;
+        }
+        li:nth-child(13):hover {
+            background-color: rgb(245, 245, 245);
+        }
+        li:nth-child(13).active {
+            background-color: rgb(245, 245, 245);
+        }
+    }
+
     .visible {
         display: flex;
     }
