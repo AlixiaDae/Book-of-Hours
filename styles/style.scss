@@ -80,47 +80,6 @@ main {
     position: relative;
     flex-grow: 1;
 
-    .book-form {
-        display: none;
-            position: absolute;
-            top: 100px;
-            left: 44.5%;
-            z-index: 3;
-            background-color: whitesmoke;
-            border: 1px solid black;
-            padding: .4rem;
-
-        fieldset {
-            border: none;
-            gap: 3px;
-            background-color: whitesmoke;
-            @include flexCenter(column, center, "");
-
-            legend {
-                margin-left: -2px;
-            }
-
-            label {
-                text-align: left;
-            }
-
-            label[for="addNow"] {
-                -moz-user-select: none;
-                user-select: none;
-            }
-
-            #submit {
-                margin-top: .5rem;
-                padding: .4rem;
-            }
-        }
-
-        .visible {
-            display: block;
-           
-        }
-    }
-
     .aspect-list, .craft-list {
         display: none;
         overflow: scroll;
@@ -242,17 +201,9 @@ main {
     .hush-content-headers, .craft-content-headers, .content-headers, .hush-container-grid, .container-grid, .recipe-grid {
         display: grid;
         text-align: center;
-
-        div:not(:last-child) {
-            border-right: 1px solid black;
-        }
     }
 
-    .hush-tab, .craft-tab {
-        border-bottom: 1px solid black;
-    }
-
-    .recipe-tab {
+    .hush-tab, .craft-tab, .recipe-tab {
         border-bottom: 1px solid black;
     }
 
@@ -270,11 +221,14 @@ main {
         div:last-child {
             border-right: 1px solid black;
         }
+
+        div:not(:last-child) {
+            border-right: 1px solid black;
+        }
     }
 
     .craft-content-headers, .recipe-grid {
         grid-template-columns: repeat(7, minmax(170px, 1fr));
-        
     }
 
     .craft-content-headers {
@@ -290,6 +244,10 @@ main {
         div:last-child {
             border-right: 1px solid black;
         }
+
+        div:not(:last-child) {
+            border-right: 1px solid black;
+        }
     }
 
     .recipe-grid {
@@ -303,6 +261,10 @@ main {
         div:last-child {
             border-right: 1px solid black;
         }
+
+        div:not(:last-child) {
+            border-right: 1px solid black;
+        }
     }
 
     .content-headers, .container-grid {
@@ -312,8 +274,8 @@ main {
     .content-headers {
 
         div {
-            border-top: 1px solid black;
-            border-bottom: 1px solid black;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
         }
 
         div:first-child {
@@ -322,6 +284,23 @@ main {
 
         div:last-child {
             border-right: 1px solid black;
+        }
+
+        div:not(:last-child) {
+            border-right: 1px solid black;
+        }
+
+    }
+
+    .container-grid {
+        
+        div {
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+
+        div:first-child {
+            border-left: 1px solid black;
         }
     }
 
@@ -338,25 +317,6 @@ main {
             padding-right: 50px;
             display: flex;
             justify-content: center;
-        }
-    }
-
-    .container-grid {
-
-        div {
-            border-bottom: 1px solid black;
-        }
-        
-        div:first-child {
-            border-left: 1px solid black;
-        }
-        
-        div:last-child {
-            border-right: 1px solid black;
-        }
-
-        &:not(:nth-child(2)) {
-            border-top: 1px solid black;
         }
     }
 

@@ -73,43 +73,6 @@ main {
   position: relative;
   flex-grow: 1;
 }
-main .book-form {
-  display: none;
-  position: absolute;
-  top: 100px;
-  left: 44.5%;
-  z-index: 3;
-  background-color: whitesmoke;
-  border: 1px solid black;
-  padding: 0.4rem;
-}
-main .book-form fieldset {
-  border: none;
-  gap: 3px;
-  background-color: whitesmoke;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: "";
-}
-main .book-form fieldset legend {
-  margin-left: -2px;
-}
-main .book-form fieldset label {
-  text-align: left;
-}
-main .book-form fieldset label[for=addNow] {
-  -moz-user-select: none;
-  -webkit-user-select: none;
-          user-select: none;
-}
-main .book-form fieldset #submit {
-  margin-top: 0.5rem;
-  padding: 0.4rem;
-}
-main .book-form .visible {
-  display: block;
-}
 main .aspect-list, main .craft-list {
   display: none;
   overflow: scroll;
@@ -222,13 +185,7 @@ main .hush-content-headers, main .craft-content-headers, main .content-headers, 
   display: grid;
   text-align: center;
 }
-main .hush-content-headers div:not(:last-child), main .craft-content-headers div:not(:last-child), main .content-headers div:not(:last-child), main .hush-container-grid div:not(:last-child), main .container-grid div:not(:last-child), main .recipe-grid div:not(:last-child) {
-  border-right: 1px solid black;
-}
-main .hush-tab, main .craft-tab {
-  border-bottom: 1px solid black;
-}
-main .recipe-tab {
+main .hush-tab, main .craft-tab, main .recipe-tab {
   border-bottom: 1px solid black;
 }
 main .hush-content-headers, main .hush-container-grid {
@@ -241,6 +198,9 @@ main .hush-content-headers div:first-child, main .hush-container-grid div:first-
   border-left: 1px solid black;
 }
 main .hush-content-headers div:last-child, main .hush-container-grid div:last-child {
+  border-right: 1px solid black;
+}
+main .hush-content-headers div:not(:last-child), main .hush-container-grid div:not(:last-child) {
   border-right: 1px solid black;
 }
 main .craft-content-headers, main .recipe-grid {
@@ -256,6 +216,9 @@ main .craft-content-headers div:first-child {
 main .craft-content-headers div:last-child {
   border-right: 1px solid black;
 }
+main .craft-content-headers div:not(:last-child) {
+  border-right: 1px solid black;
+}
 main .recipe-grid div {
   border-bottom: 1px solid black;
 }
@@ -263,6 +226,9 @@ main .recipe-grid div:first-child {
   border-left: 1px solid black;
 }
 main .recipe-grid div:last-child {
+  border-right: 1px solid black;
+}
+main .recipe-grid div:not(:last-child) {
   border-right: 1px solid black;
 }
 main .content-headers, main .container-grid {
@@ -278,6 +244,16 @@ main .content-headers div:first-child {
 main .content-headers div:last-child {
   border-right: 1px solid black;
 }
+main .content-headers div:not(:last-child) {
+  border-right: 1px solid black;
+}
+main .container-grid div {
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+main .container-grid div:first-child {
+  border-left: 1px solid black;
+}
 main .hush-container-grid, main .container-grid, main .recipe-grid {
   border-top: none;
   grid-template-rows: 100%;
@@ -287,18 +263,6 @@ main .hush-container-grid div, main .container-grid div {
   padding-right: 50px;
   display: flex;
   justify-content: center;
-}
-main .container-grid div {
-  border-bottom: 1px solid black;
-}
-main .container-grid div:first-child {
-  border-left: 1px solid black;
-}
-main .container-grid div:last-child {
-  border-right: 1px solid black;
-}
-main .container-grid:not(:nth-child(2)) {
-  border-top: 1px solid black;
 }
 main .recipe-grid div {
   padding: 0.5rem;

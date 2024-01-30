@@ -14,38 +14,12 @@ const storage = new Storage("hushhouse")
 const contentBox = document.querySelector(".content")
 addOptions(recipeStorage.getRecipesMenu().book.map(i => i.name), document.getElementById("type"), "type")
 
-const addBookBtn = document.querySelector(".add-book")
 const resetStorageBtn = document.querySelector(".reset")
-const bookFormBox = document.querySelector(".book-form")
-const submitBtn = document.getElementById("submit")
 const craftListEl = document.querySelector(".craft-list")
 const aspectListEl = document.querySelector(".aspect-list")
 
-addBookBtn.addEventListener("click", () => {
-    recipeFormBox.classList.remove("visible")
-    bookFormBox.classList.toggle("visible")
-})
-
 resetStorageBtn.addEventListener("click", () => {
     localStorage.removeItem("hushhouse")
-    loadHush()
-})
-
-submitBtn.addEventListener("click", (e) => {
-    e.preventDefault()
-    const bookNameInput = document.getElementById("bookName")
-    const skillNameInput = document.getElementById("skill")
-    const memoryNameInput = document.querySelector("select")
-    const checkBookIn = document.getElementById("addNow")
-    
-    if(bookNameInput.value === "") return
-    if(skillNameInput.value === "") return
-    const newBook = new Book(bookNameInput.value, memoryNameInput.value, skillNameInput.value)
-
-    mainLibraryStorage.addBook(newBook)
-    if(checkBookIn.checked) storage.addBook(newBook)
-    bookNameInput.value = ""
-    skillNameInput.value = ""
     loadHush()
 })
 
