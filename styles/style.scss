@@ -277,6 +277,34 @@ main {
         
     }
 
+    .craft-content-headers {
+        div {
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+
+        div:first-child {
+            border-left: 1px solid black;
+        }
+
+        div:last-child {
+            border-right: 1px solid black;
+        }
+    }
+
+    .recipe-grid {
+        div {
+            border-bottom: 1px solid black;
+        }
+        div:first-child {
+            border-left: 1px solid black;
+        }
+
+        div:last-child {
+            border-right: 1px solid black;
+        }
+    }
+
     .content-headers, .container-grid {
         grid-template-columns: repeat(4, minmax(300px, 1fr));
     }

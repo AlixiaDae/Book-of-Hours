@@ -246,6 +246,25 @@ main .hush-content-headers div:last-child, main .hush-container-grid div:last-ch
 main .craft-content-headers, main .recipe-grid {
   grid-template-columns: repeat(7, minmax(170px, 1fr));
 }
+main .craft-content-headers div {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+main .craft-content-headers div:first-child {
+  border-left: 1px solid black;
+}
+main .craft-content-headers div:last-child {
+  border-right: 1px solid black;
+}
+main .recipe-grid div {
+  border-bottom: 1px solid black;
+}
+main .recipe-grid div:first-child {
+  border-left: 1px solid black;
+}
+main .recipe-grid div:last-child {
+  border-right: 1px solid black;
+}
 main .content-headers, main .container-grid {
   grid-template-columns: repeat(4, minmax(300px, 1fr));
 }
