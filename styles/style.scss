@@ -32,7 +32,7 @@ h1, h2, h3 {
 ul {
     padding: 0;
     margin: 0;
-    @include flexCenter(row, space-around, center);
+    @include flexCenter(row, space-between, "");
 
     li {
         display: inline;
@@ -123,8 +123,7 @@ main {
 
     .aspect-list, .craft-list {
         display: none;
-        border-top: 1px solid black;
-        min-width: fit-content;
+        overflow: scroll;
 
         li:not(:last-child) {
             border-right: 1px solid black;
@@ -132,6 +131,10 @@ main {
     }
 
     .aspect-list {
+
+        .aspect-tab {
+            border-bottom: 1px solid black;
+        }
 
         li:first-child:hover {
             background-color: yellow;
@@ -232,33 +235,68 @@ main {
     }
 
     .content {
-        border-top: 1px solid black;
         padding: 1rem;
+        overflow: scroll;
     }
         
     .hush-content-headers, .craft-content-headers, .content-headers, .hush-container-grid, .container-grid, .recipe-grid {
         display: grid;
         text-align: center;
-        border: 1px solid black;
-        overflow: hidden;
-        min-width: fit-content;
 
         div:not(:last-child) {
             border-right: 1px solid black;
         }
     }
 
+    .hush-tab, .craft-tab {
+        border-bottom: 1px solid black;
+    }
+
+    .recipe-tab {
+        border-bottom: 1px solid black;
+    }
+
     .hush-content-headers, .hush-container-grid {
         grid-template-columns: repeat(3, minmax(200px, 1fr));
+
+        div {
+            border-top: 1px solid black;
+        }
+
+        div:first-child {
+            border-left: 1px solid black;
+        }
+
+        div:last-child {
+            border-right: 1px solid black;
+        }
     }
 
     .craft-content-headers, .recipe-grid {
         grid-template-columns: repeat(7, minmax(170px, 1fr));
+        
     }
 
     .content-headers, .container-grid {
         grid-template-columns: repeat(4, minmax(300px, 1fr));
     }
+
+    .content-headers {
+
+        div {
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+
+        div:first-child {
+            border-left: 1px solid black;
+        }
+
+        div:last-child {
+            border-right: 1px solid black;
+        }
+    }
+
 
     .hush-container-grid, .container-grid, .recipe-grid {
         border-top: none;
@@ -272,6 +310,25 @@ main {
             padding-right: 50px;
             display: flex;
             justify-content: center;
+        }
+    }
+
+    .container-grid {
+
+        div {
+            border-bottom: 1px solid black;
+        }
+        
+        div:first-child {
+            border-left: 1px solid black;
+        }
+        
+        div:last-child {
+            border-right: 1px solid black;
+        }
+
+        &:not(:nth-child(2)) {
+            border-top: 1px solid black;
         }
     }
 
