@@ -80,6 +80,9 @@ main .aspect-list, main .craft-list {
 main .aspect-list li:not(:last-child), main .craft-list li:not(:last-child) {
   border-right: 1px solid black;
 }
+main .craft-list li.active {
+  background-color: lightgray;
+}
 main .aspect-list .aspect-tab {
   border-bottom: 1px solid black;
 }

@@ -89,6 +89,13 @@ main {
         }
     }
 
+    .craft-list {
+
+        li.active {
+            background-color: lightgray;
+        }
+    }
+
     .aspect-list {
 
         .aspect-tab {

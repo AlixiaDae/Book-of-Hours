@@ -378,11 +378,11 @@ function flash(e) {
 
 aspectTabs.forEach(tab => {
     tab.addEventListener("click", () => {
-        setActiveButton(tab)
+        setActiveAspectButton(tab)
     })
 })
 
-function setActiveButton(button) {
+function setActiveAspectButton(button) {
     aspectTabs.forEach(button => {
         if(button !== this) {
             button.classList.remove("active")
@@ -391,10 +391,25 @@ function setActiveButton(button) {
     button.classList.add("active")
 }
 
-hushTab.addEventListener("click", () => [
+function setActiveCraftButton(button) {
+    recipeTabs.forEach(button => {
+        if(button !== this) {
+            button.classList.remove("active")
+        }
+    })
+    button.classList.add("active")
+}
+
+recipeTabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+        setActiveCraftButton(tab)
+    })
+})
+
+hushTab.addEventListener("click", () => {
     aspectTabs.forEach(tab => 
         tab.classList.remove("active"))
-])
+})
 
 craftTab.addEventListener("click", () => {
     aspectTabs.forEach(tab => {
