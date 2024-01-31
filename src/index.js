@@ -1,8 +1,5 @@
 import Storage from "./modules/bookModules/storage.js"
-import Book from "./modules/bookModules/book.js"
 import memoryList from "./modules/memory.js"
-import recipeStorage from "./modules/recipeModules/localRecipes.js"
-import Recipe from "./modules/recipeModules/recipe.js"
 import mainLibraryStorage from "./modules/mainLibraryStorage.js"
 import recipeList from "./modules/recipeFactory.js"
 
@@ -12,8 +9,6 @@ const storage = new Storage("hushhouse")
 
 // DOM Functions
 const contentBox = document.querySelector(".content")
-addOptions(recipeStorage.getRecipesMenu().book.map(i => i.name), document.getElementById("type"), "type")
-
 const resetStorageBtn = document.querySelector(".reset")
 const craftListEl = document.querySelector(".craft-list")
 const aspectListEl = document.querySelector(".aspect-list")
@@ -109,8 +104,7 @@ function createHushTab(bookObject, box) {
     })
 
     deleteBook.addEventListener("click", () => {
-        mainLibraryStorage.deleteBook(bookName.textContent)
-        loadHush()
+        console.log(mainLibraryStorage.getBooksMenu().getBook(bookName.textContent))
     })
 
     bookName.addEventListener("keydown", (e) => {
@@ -254,32 +248,10 @@ function createHeaders(tabType) {
     }
 }
 
-//Util for select element
-
-function addOptions(list, element, type) {
-    if(type === "memory") {
-        const sortedList = list.sort((a,b) => {
-            const ma = a.memoryName
-            const mb = b.memoryName
-            if(ma < mb) return -1
-            if(ma > mb) return 1
-            return 0
-        }) 
-        for(let i = 0; i < sortedList.length; i++) {
-            const name = sortedList[i].memoryName
-            const option = document.createElement("option")
-            option.textContent = name.charAt(0).toUpperCase() + name.slice(1)
-            option.setAttribute("value", name)
-            element.appendChild(option)
-        }
-    } 
-    
-}
-
 
 // Util function for sorting books
 // Sorts books alphabetically on Hush House tab
-// Sorts books by degree then the memories alphabetically on Aspect tab
+// Sorts the memories by degree and alphabetically on Aspect tab
 
 function sortBookList(tabName) {
     if(tabName !== "hush" && tabName !== "numen") {
@@ -299,7 +271,7 @@ function sortBookList(tabName) {
             if(memory.map(mem => mem.memoryName).includes(book.memoryName)) {
                 const bookMemory = memoryList.find(mem => mem.memoryName === book.memoryName)
 
-                // ["lantern","foresight"] [1,2] aspect index === degree index
+                // ["lantern","foresight"] [1,2] aspect index => degree index
 
                 const index = bookMemory.aspect.findIndex(asp => asp === tabName.toLowerCase())
                 if(bookMemory.degree[index] === 4 || bookMemory.degree[index] === 5) {
@@ -314,6 +286,8 @@ function sortBookList(tabName) {
             }
         }
 
+            // Sorts books with memories of 1 degree alphabetically
+
                 listA.sort((a,b) => {
                     const ma = a.memoryName
                     const mb = b.memoryName
@@ -321,6 +295,8 @@ function sortBookList(tabName) {
                     if(ma > mb) return 1
                     return 0
                 })
+
+            // Sorts books with memories of 2 degree alphabetically
 
                 listB.sort((a,b) => {
                     const ma = a.memoryName
@@ -330,6 +306,9 @@ function sortBookList(tabName) {
                     return 0
                 })
 
+            
+            // Sorts books with memories of 3 degree alphabetically
+
                 listC.sort((a,b) => {
                     const ma = a.memoryName
                     const mb = b.memoryName
@@ -337,6 +316,8 @@ function sortBookList(tabName) {
                     if(ma > mb) return 1
                     return 0
                 })
+
+            // Sorts books with memories of 4 and 5 degree alphabetically
 
                 listD.sort((a,b) => {
                     const ma = a.memoryName
@@ -372,15 +353,8 @@ function flash(e) {
     }, 0.03)
 }
 
-//Click an aspect tab
-//Remove active class from other tabs
-//Change the clicked tab to an active tab
+//Util for activating tabs
 
-aspectTabs.forEach(tab => {
-    tab.addEventListener("click", () => {
-        setActiveAspectButton(tab)
-    })
-})
 
 function setActiveAspectButton(button) {
     aspectTabs.forEach(button => {
@@ -399,6 +373,14 @@ function setActiveCraftButton(button) {
     })
     button.classList.add("active")
 }
+
+// Listeners for activating tabs
+
+aspectTabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+        setActiveAspectButton(tab)
+    })
+})
 
 recipeTabs.forEach(tab => {
     tab.addEventListener("click", () => {

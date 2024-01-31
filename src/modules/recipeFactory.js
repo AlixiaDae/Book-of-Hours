@@ -63,5 +63,7 @@ const dearday = recipeFactory("Devices", "Dearday Lens", "Lantern", "5 Lantern o
 const gervinite = recipeFactory("Materials", "Gervinite", "Knock", ["10 Knock", "Glass", "10 Sky(Glaziery)", "Metal(Glaziery)"], ["Lockworks and Clockworks", "Glaziery and Lightsmithing"], ["Dispensary(Lockworks)", "Any that accepts metal"], ["2 Rose", "4 Knock"], ["Found in Our Lady Beneath", "In weighty bedside candleholder"])
 
 
-const recipeList = [tisane, cordials, eigengrau, rubywise, yewgall, solomon, leathy, ascite, calicite, malachite, serpent, skinshuck, perhibiate, stargall, catwink, perinculate, asimel, houndsgall, ashartine, marakat, nillycant, orpiment, porphyrine, uzult, thunderskin, nameday, forbidden, moment, torgue, winning, ascendant, curious, didumos, earth, quake, enduring, hive, horizon, invincible, occult, wound, wind, wormwood, mazarine, chronsichord, mommet, flushed, dearday]
+const recipeList = [tisane, cordials, eigengrau, rubywise, yewgall, solomon, leathy, ascite, calicite, malachite, serpent, skinshuck, perhibiate, stargall, catwink, perinculate, asimel, houndsgall, ashartine, marakat, nillycant, orpiment, porphyrine, uzult, thunderskin, nameday, forbidden, moment, torgue, winning, ascendant, curious, didumos, earth, quake, enduring, hive, horizon, invincible, occult, wound, wind, wormwood, mazarine, chronsichord, mommet, flushed, dearday, gervinite]
+
+
 export default recipeList
