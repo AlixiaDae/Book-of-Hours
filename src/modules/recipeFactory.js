@@ -61,9 +61,25 @@ const flushed = recipeFactory("Devices", "Flushed Mommet", "Grail", ["15 Grail",
 const dearday = recipeFactory("Devices", "Dearday Lens", "Lantern", "5 Lantern or 5 Sky(Glassblowing and Glaziery)", ["Glaziery and Lightsmithing", "Pyroglyphics", "Disciplines of the Scar", "Glassblowing and Vesselcrafting"], "Mainly Telescope", ["Forge", "Edge", "2 Sky", "2 Lantern"])
 
 //Material 
+const awakened = recipeFactory("Materials", "Awakened Feather", "Sky", "5 Sky", ["Anbary and Lapidary", "Lockworks and Clockworks", "Stitching and Binding", "Sights and Sensations", "Sacra Limiae", "Furs and Feathers"], "Any", ["Scale", "2 Sky"], "Considering makes Cheerful Ditty")
 const gervinite = recipeFactory("Materials", "Gervinite", "Knock", ["10 Knock", "Glass", "10 Sky(Glaziery)", "Metal(Glaziery)"], ["Lockworks and Clockworks", "Glaziery and Lightsmithing"], ["Dispensary(Lockworks)", "Any that accepts metal"], ["2 Rose", "4 Knock"], ["Found in Our Lady Beneath", "In weighty bedside candleholder"])
+const labhitic = recipeFactory("Materials", "Labhitic Tincture", "Edge", "5 Edge", ["Edicts Martial", "Disciplines of the Hammer", "Ragged Crossroads", "Sickle and Eclipse"], "Any", ["Lantern", "2 Edge"])
+const refulgin = recipeFactory("Materials", "Refulgin", "Lantern", "5 Lantern", ["Purifications and Exaltations", "Transformations and Liberations", "Sacra Solis Invicti", "Inks of Revelation"], "Any", "2 Lantern")
+const tanglebrag = recipeFactory("Materials", "Tanglebrag", "Moth", "5 Moth or 5 Lantern(Watchman's Paradoxes)", ["Edicts Liminal", "Resurgences and Emergences", "Rites of the Roots", "Weaving and Knotworking", "Watchman's Paradoxes"], "Any", ["Lantern", "Nectar", "Scale", "2 Moth"])
+const westcott = recipeFactory("Materials", "Westcott's Compounds", "Forge", "5 Moth or 5 Forge(Pyro/Meniscate/Spices)", ["Sacra Limiae", "Pyroglyphics", "Solutions and Separations", "Pyroglyphics", "Meniscate Reflections", "Spices and Savours"], "Any", ["Nectar", "Grail", "Lantern", "Moth", "2 Forge"])
 
-const recipeList = [earth, occult, torgue, savage, wound, nameday, ascendant, curious, enduring, hive, moment, winning, thunderskin, wormwood, didumos, forbidden,horizon, invincible, quake, wind, tisane, cordials, eigengrau, rubywise, yewgall, solomon, leathy, ascite, calicite, malachite, serpent, skinshuck, perhibiate, stargall, catwink, perinculate, asimel, houndsgall, ashartine, marakat, nillycant, orpiment, porphyrine, uzult, mazarine, chronsichord, mommet, flushed, dearday, gervinite]
+//Misc
+const loss = recipeFactory("Misc", "Loss", "Winter/Edge", "Discard anything at Sea's Edge", "N/A", "Sea's Edge", ["Edge", "Winter"])
+const rumour = recipeFactory("Misc", "Wind-Rumour", "Sky", "Talk to Gull", "N/A", "N/A", ["Heart", "2 Sky"], ["Evolve via Birdsong", "Omen"])
+const scent = recipeFactory("Misc", "Scent", "Nectar", "Paradise Palm/Red Practice Sword/Red Quarterstaff/Watchful Potted Plant", "N/A", "N/A", "Nectar")
+const sight = recipeFactory("Misc", "Sight", "Lantern", "Consider any bust", "N/A", "N/A", "Lantern")
+const surmise = recipeFactory("Misc", "Wild Surmise", "Lantern/Moth/Sky", "Consider Historywax Candle", "N/A", "N/A", ["3 Lantern", "3 Moth", "3 Sky"], "Evolve via Ithastry")
+const taste = recipeFactory("Misc", "Taste", "Grail", "Consume food or drink(preferably with grail aspect)", "N/A", "N/A")
+const touch =recipeFactory("Misc", "Touch", "Forge", "Consider comfort furniture", "N/A", "N/A", "Forge")
+const sound = recipeFactory("Misc", "Sound", "Heart", ["Consider House Key", "Consider avian pets", "Consider Moth/Knock furniture", "Renounce at Well"], "N/A", "N/A", "Heart")
+
+
+const recipeList = [earth, occult, torgue, savage, wound, nameday, ascendant, curious, enduring, hive, moment, winning, thunderskin, wormwood, didumos, forbidden,horizon, invincible, quake, wind, tisane, cordials, eigengrau, rubywise, yewgall, solomon, leathy, ascite, calicite, malachite, serpent, skinshuck, perhibiate, stargall, catwink, perinculate, asimel, houndsgall, ashartine, marakat, nillycant, orpiment, porphyrine, uzult, mazarine, chronsichord, mommet, flushed, dearday, awakened, gervinite, labhitic, refulgin, tanglebrag, westcott, loss, scent, sight, sound, taste, touch, surmise, rumour]
 
 
 export default recipeList

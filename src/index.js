@@ -1,7 +1,8 @@
 import Storage from "./modules/bookModules/storage.js"
-import memoryList from "./modules/memory.js"
 import mainLibraryStorage from "./modules/mainLibraryStorage.js"
 import recipeList from "./modules/recipeFactory.js"
+import skillList from "./modules/skillFactory.js"
+import memoryList from "./modules/memory.js"
 
 //Local Storages
 
@@ -29,6 +30,12 @@ aspectTabs.forEach(tab =>
         }
     }
 }))
+
+const skillTab = document.querySelector(".skills-tab")
+skillTab.addEventListener("click", () => {
+    createHeaders("skills")
+    createSkillsTab(skillList, contentBox)
+})
 
 function createAspectTab(bookObject, tabName, box) {
     const memory = memoryList.find(mem => mem.memoryName === bookObject.memoryName)
@@ -194,6 +201,35 @@ function createCraftTab(typeObject, tabName, box) {
     }
 }
 
+function createSkillsTab(list, box) {
+    console.log(list)
+    for(let i = 0; i < list.length; i++) {
+        const container = document.createElement("div")
+        container.classList.add("skill-grid")
+        const name = document.createElement("div")
+        name.textContent = list[i].name
+        const principles = document.createElement("div")
+        principles.textContent = list[i].principles.join(", ")
+
+        const wisdomContainer = document.createElement("div")
+        const wisdomOne = document.createElement("div")
+        wisdomOne.textContent = list[i].wisdoms[0]
+        const wisdomTwo = document.createElement("div")
+        wisdomTwo.textContent = list[i].wisdoms[1]
+
+        const attunablesContainer = document.createElement("div")
+        const atOne = document.createElement("div")
+        atOne.textContent = list[i].attunables[0]
+        const atTwo = document.createElement("div")
+        atTwo.textContent = list[i].attunables[1]
+
+        wisdomContainer.append(wisdomOne, wisdomTwo)
+        attunablesContainer.append(atOne, atTwo)
+        container.append(name, principles, wisdomContainer, attunablesContainer)
+        box.appendChild(container)
+    }
+}
+
 
 function createHeaders(tabType) {
     if(tabType === "tabs") {
@@ -225,7 +261,7 @@ function createHeaders(tabType) {
         header.append(bName, mName, sName)
         contentBox.appendChild(header)
     } else if(tabType === "recipe") {
-        contentBox.textContent =""
+        contentBox.textContent = ""
         const header = document.createElement("div")
         header.classList.add("craft-content-headers")
         const rName = document.createElement("div")
@@ -244,6 +280,23 @@ function createHeaders(tabType) {
         notes.textContent = "Additional notes"
 
         header.append(rName, aspect, work, skillName, ingredients, results, notes)
+        contentBox.appendChild(header)
+    } else if(tabType === "skills") {
+        aspectListEl.classList.remove("visible")
+        craftListEl.classList.remove("visible")
+        contentBox.textContent = ""
+        const header = document.createElement("div")
+        header.classList.add("skill-content-headers")
+        const sName = document.createElement("div")
+        sName.textContent = "Skill Name"
+        const pName = document.createElement("div")
+        pName.textContent = "Principles"
+        const wName = document.createElement("div")
+        wName.textContent = "Wisdoms"
+        const attunables = document.createElement("div")
+        attunables.textContent = "Attunable Elements"
+
+        header.append(sName, pName, wName, attunables)
         contentBox.appendChild(header)
     }
 }
