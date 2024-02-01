@@ -71,8 +71,8 @@ function createHushTab(bookObject, box) {
     const addToStorage = document.createElement("span")
     addToStorage.classList.add("fa-solid", "fa-square-plus", "fa-xl")
     
-    const deleteBook = document.createElement("span")
-    deleteBook.classList.add("fa-solid", "fa-square-xmark", "fa-xl")
+    const removeBook = document.createElement("span")
+    removeBook.classList.add("fa-solid", "fa-square-minus", "fa-xl")
     const bookNameContainer = document.createElement("div")
     bookNameContainer.classList.add("book")
     const bookName = document.createElement("p")
@@ -89,7 +89,7 @@ function createHushTab(bookObject, box) {
     skillName.setAttribute("contenteditable", "true")
     skillName.textContent = bookObject.skillName
     
-    bookNameContainer.append(bookName, addToStorage, deleteBook)
+    bookNameContainer.append(bookName, addToStorage, removeBook)
     memoryNameContainer.appendChild(memoryName)
     skillNameContainter.appendChild(skillName)
     container.append(bookNameContainer, memoryNameContainer, skillNameContainter)
@@ -103,8 +103,8 @@ function createHushTab(bookObject, box) {
         storage.addBook(bookObject)
     })
 
-    deleteBook.addEventListener("click", () => {
-        console.log(mainLibraryStorage.getBooksMenu().getBook(bookName.textContent))
+    removeBook.addEventListener("click", () => {
+        storage.deleteBook(bookName.textContent)
     })
 
     bookName.addEventListener("keydown", (e) => {
@@ -391,6 +391,12 @@ recipeTabs.forEach(tab => {
 hushTab.addEventListener("click", () => {
     aspectTabs.forEach(tab => 
         tab.classList.remove("active"))
+})
+
+hushTab.addEventListener("click", () => {
+    recipeTabs.forEach(tab => {
+        tab.classList.remove("active")
+    })
 })
 
 craftTab.addEventListener("click", () => {

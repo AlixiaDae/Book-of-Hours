@@ -51,6 +51,7 @@ const occult = recipeFactory("Memories", "Occult Scrap", "Rose", "N/A", "Yellowi
 const wound = recipeFactory("Memories", "Old Wound", "Moon", "5 Moon", "Edicts Martial", "Any", ["1 Edge", "2 Moon", "3 Winter"], "Persistent")
 const wind = recipeFactory("Memories", "Wind-in-Waiting", "Sky", ["15 Sky", "Mazarine Fife"], ["Strings and Songs", "Sky Stories", "Sacra Solis Invicti","Furs and Feathers"], ["Gullscry", "Hermit", "Ambrose", "Reading Room", "Pale", "Telescope"], ["3 Moth", "3 Grail", "3 Scale", "6 Sky"], ["Evolve via Bosk", "Evolve via Birdsong", "Persistent"])
 const wormwood = recipeFactory("Memories", "Womrwood Dream", "Winter", ["10 Moon(Edicts Martial)", "Memory(Edicts Martial)","15 Moon", "Stymphling"], ["Edicts Martial", "Edicts Inviolable", "Rhyme and Remembrance", "Snow Stories", "Wolf Stories", "Sickle and Eclipse"], "Any", ["3 Edge", "6 Moon", "6 Winter"], ["Evolve via Skolekosophy", "Evolve via Nyctodromy", "Persistent"])
+const savage = recipeFactory("Memories", "Savage Hymn", "Scale", ["5 Scale(Drums and Dances, Stone Stories)", "5 Nectar(Drums and Dances)"], ["Drums and Dances", "Stone Stories"], "Any", ["2 Scale", "2 Sky"])
 
 // Tool
 const mazarine = recipeFactory("Devices", "Mazarine Fife", "Sky", ["10 Sky", "Wood"], ["Ouranoscopy", "Sacra Limiae", "Sacra Solis Invicti"], ["Gullscry", "Hermit", "Solar Altar"], "3 Sky", "Instrument")
@@ -62,8 +63,7 @@ const dearday = recipeFactory("Devices", "Dearday Lens", "Lantern", "5 Lantern o
 //Material 
 const gervinite = recipeFactory("Materials", "Gervinite", "Knock", ["10 Knock", "Glass", "10 Sky(Glaziery)", "Metal(Glaziery)"], ["Lockworks and Clockworks", "Glaziery and Lightsmithing"], ["Dispensary(Lockworks)", "Any that accepts metal"], ["2 Rose", "4 Knock"], ["Found in Our Lady Beneath", "In weighty bedside candleholder"])
 
-
-const recipeList = [tisane, cordials, eigengrau, rubywise, yewgall, solomon, leathy, ascite, calicite, malachite, serpent, skinshuck, perhibiate, stargall, catwink, perinculate, asimel, houndsgall, ashartine, marakat, nillycant, orpiment, porphyrine, uzult, thunderskin, nameday, forbidden, moment, torgue, winning, ascendant, curious, didumos, earth, quake, enduring, hive, horizon, invincible, occult, wound, wind, wormwood, mazarine, chronsichord, mommet, flushed, dearday, gervinite]
+const recipeList = [earth, occult, torgue, savage, wound, nameday, ascendant, curious, enduring, hive, moment, winning, thunderskin, wormwood, didumos, forbidden,horizon, invincible, quake, wind, tisane, cordials, eigengrau, rubywise, yewgall, solomon, leathy, ascite, calicite, malachite, serpent, skinshuck, perhibiate, stargall, catwink, perinculate, asimel, houndsgall, ashartine, marakat, nillycant, orpiment, porphyrine, uzult, mazarine, chronsichord, mommet, flushed, dearday, gervinite]
 
 
 export default recipeList

@@ -214,11 +214,19 @@ main {
         border-bottom: 1px solid black;
     }
 
+    .hush-content-headers {
+        border-top: 1px solid black;
+    }
+
+    .content-headers {
+        border-bottom: 1px solid black;
+    }
+
     .hush-content-headers, .hush-container-grid {
         grid-template-columns: repeat(3, minmax(200px, 1fr));
 
         div {
-            border-top: 1px solid black;
+            border-bottom: 1px solid black;
         }
 
         div:first-child {
@@ -233,6 +241,7 @@ main {
             border-right: 1px solid black;
         }
     }
+
 
     .craft-content-headers, .recipe-grid {
         grid-template-columns: repeat(7, minmax(170px, 1fr));
@@ -282,7 +291,6 @@ main {
 
         div {
         border-top: 1px solid black;
-        border-bottom: 1px solid black;
         }
 
         div:first-child {
@@ -312,7 +320,7 @@ main {
     }
 
 
-    .hush-container-grid, .container-grid, .recipe-grid {
+    .container-grid, .recipe-grid {
         border-top: none;
         grid-template-rows: 100%;
     }
@@ -357,11 +365,6 @@ main {
             }
 
             .fa-square-minus {
-                top: 30px;
-                left: 35px;
-            }
-
-            .fa-square-xmark {
                 top: 30px;
                 right: 10px;
             }
