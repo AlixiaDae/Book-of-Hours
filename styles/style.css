@@ -163,11 +163,11 @@ main .aspect-list li:nth-child(11).active {
   color: whitesmoke;
 }
 main .aspect-list li:nth-child(12):hover {
-  background-color: green;
+  background-color: rgb(53, 175, 53);
   color: whitesmoke;
 }
 main .aspect-list li:nth-child(12).active {
-  background-color: green;
+  background-color: rgb(53, 175, 53);
   color: whitesmoke;
 }
 main .aspect-list li:nth-child(13):hover {
@@ -181,6 +181,7 @@ main .visible {
 }
 main .content {
   padding: 1rem;
+  overflow: scroll;
 }
 main .hush-content-headers, main .content-headers, main .craft-content-headers, main .skill-content-headers, main .hush-container-grid, main .container-grid, main .recipe-grid, main .skill-grid {
   display: grid;
@@ -195,11 +196,13 @@ main .content-headers, main .skill-content-headers, main .container-grid, main .
 main .craft-content-headers, main .recipe-grid {
   grid-template-columns: repeat(7, minmax(170px, 1fr));
 }
-main .hush-content-headers, main .content-headers, main .craft-content-headers, main .skill-content-headers, main .hush-container-grid {
-  border: 1px solid black;
-}
-main .hush-content-headers div:not(:last-child), main .content-headers div:not(:last-child), main .craft-content-headers div:not(:last-child), main .skill-content-headers div:not(:last-child), main .hush-container-grid div:not(:last-child) {
+main .hush-content-headers div, main .content-headers div, main .craft-content-headers div, main .skill-content-headers div {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
   border-right: 1px solid black;
+}
+main .hush-content-headers div:first-child, main .content-headers div:first-child, main .craft-content-headers div:first-child, main .skill-content-headers div:first-child {
+  border-left: 1px solid black;
 }
 main .container-grid div:first-child, main .recipe-grid div:first-child, main .skill-grid div:first-child {
   border-left: 1px solid black;
@@ -208,17 +211,104 @@ main .container-grid div, main .recipe-grid div, main .skill-grid div {
   border-right: 1px solid black;
   border-bottom: 1px solid black;
 }
+main .skill-grid {
+  /*
+          .horo {
+              background-color: rgb(35, 35, 255);
+              color: whitesmoke;
+          }
+
+          .itha {
+              background-color: orange;
+          }
+
+          .bosk {
+              background-color: rgb(65, 163, 65);
+              color: whitesmoke;
+          }
+
+          .illu {
+              background-color: rgb(187, 211, 79);
+          }
+
+          .nycto {
+              background-color: rgb(190, 172, 190);
+          }
+
+          .skole {
+              background-color: rgb(189, 134, 52);
+          }
+
+          .hushery {
+              background-color: paleturquoise;
+          }
+
+          .preser {
+              background-color: rgb(238, 126, 145);
+          }
+
+          .bird {
+              background-color: violet;
+          }
+
+          .chor {
+              background-color: rgb(250, 139, 157);
+          }
+
+          .shapt {
+              background-color: rgb(155, 2, 86);
+              color: whitesmoke;
+          }
+
+          .fet {
+              background-color: rgb(79, 105, 255);
+              color: whitesmoke;
+          }
+
+          .ereb {
+              background-color: rgb(95, 12, 190);
+              color: whitesmoke;
+          }
+
+          .trist {
+              background-color: rgb(145, 181, 192);
+          }
+
+          .mettle {
+              background-color: rgb(248, 188, 22);
+          }
+
+          .health {
+              background-color: rgb(255, 70, 70);
+              color: whitesmoke;
+          }
+
+          .phost {
+              background-color: yellow;
+          }
+
+          .wist {
+              background-color: rgb(134, 50, 155);
+              color: whitesmoke;
+          }
+  */
+}
 main .skill-grid div:nth-child(3), main .skill-grid div:nth-child(4) {
-  border: none;
+  border: 1px solid black;
 }
 main .skill-grid div:nth-child(3) div:first-child, main .skill-grid div:nth-child(4) div:first-child {
   border-bottom: 1px solid black;
   border-left: none;
 }
-main .hush-container-grid {
+main .hush-container-grid div {
+  padding-left: 2rem;
+  padding-right: 2rem;
   border-top: none;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
 }
 main .hush-container-grid .book {
+  border-left: 1px solid black;
   position: relative;
 }
 main .hush-container-grid .book .fa-square-plus, main .hush-container-grid .book .fa-square-minus, main .hush-container-grid .book .fa-square-xmark {

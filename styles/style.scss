@@ -180,11 +180,11 @@ main {
             color: whitesmoke;
         }
         li:nth-child(12):hover {
-            background-color: green;
+            background-color: rgb(53, 175, 53);
             color: whitesmoke;
         }
         li:nth-child(12).active {
-            background-color: green;
+            background-color: rgb(53, 175, 53);
             color: whitesmoke;
         }
         li:nth-child(13):hover {
@@ -201,6 +201,7 @@ main {
 
     .content {
         padding: 1rem;
+        overflow: scroll;
     }
 
     .hush-content-headers, .content-headers, .craft-content-headers, .skill-content-headers, .hush-container-grid, .container-grid, .recipe-grid, .skill-grid {
@@ -220,10 +221,15 @@ main {
         grid-template-columns: repeat(7, minmax(170px, 1fr));
     }
 
-    .hush-content-headers, .content-headers, .craft-content-headers, .skill-content-headers, .hush-container-grid {
-        border: 1px solid black;
-        div:not(:last-child) {
+    .hush-content-headers, .content-headers, .craft-content-headers, .skill-content-headers {
+        div {
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
             border-right: 1px solid black;
+        }
+
+        div:first-child {
+            border-left: 1px solid black;
         }
     }
 
@@ -243,19 +249,108 @@ main {
     .skill-grid {
 
         div:nth-child(3), div:nth-child(4) {
-            border: none;
+            border: 1px solid black;
             div:first-child {
                 border-bottom: 1px solid black;
                 border-left: none;
             }
         }
+/*
+        .horo {
+            background-color: rgb(35, 35, 255);
+            color: whitesmoke;
+        }
+
+        .itha {
+            background-color: orange;
+        }
+
+        .bosk {
+            background-color: rgb(65, 163, 65);
+            color: whitesmoke;
+        }
+
+        .illu {
+            background-color: rgb(187, 211, 79);
+        }
+
+        .nycto {
+            background-color: rgb(190, 172, 190);
+        }
+
+        .skole {
+            background-color: rgb(189, 134, 52);
+        }
+
+        .hushery {
+            background-color: paleturquoise;
+        }
+
+        .preser {
+            background-color: rgb(238, 126, 145);
+        }
+
+        .bird {
+            background-color: violet;
+        }
+
+        .chor {
+            background-color: rgb(250, 139, 157);
+        }
+
+        .shapt {
+            background-color: rgb(155, 2, 86);
+            color: whitesmoke;
+        }
+
+        .fet {
+            background-color: rgb(79, 105, 255);
+            color: whitesmoke;
+        }
+        
+        .ereb {
+            background-color: rgb(95, 12, 190);
+            color: whitesmoke;
+        }
+
+        .trist {
+            background-color: rgb(145, 181, 192);
+        }
+
+        .mettle {
+            background-color: rgb(248, 188, 22);
+        }
+
+        .health {
+            background-color: rgb(255, 70, 70);
+            color: whitesmoke;
+        }
+
+        .phost {
+            background-color: yellow;
+        }
+
+        .wist {
+            background-color: rgb(134, 50, 155);
+            color: whitesmoke;
+        }
+*/
     }
     
     
     .hush-container-grid {
-        border-top: none;
+
+        div {
+            padding-left: 2rem;
+            padding-right: 2rem;
+            border-top: none;
+            border-bottom: 1px solid black;
+            border-right: 1px solid black;
+        }
+        
 
         .book {
+            border-left: 1px solid black;
             position: relative;
 
             .fa-square-plus, .fa-square-minus, .fa-square-xmark {

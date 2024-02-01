@@ -9,13 +9,13 @@ const bells = skillFactory("Bells and Brazieries", ["Forge", "Sky"], ["Horomachi
 const coil = skillFactory("Coil and Chasm", ["Scale", "Nectar"], ["Nyctodromy", "Skolekosophy"], ["Shapt", "Ereb"])
 const desires = skillFactory("Desires and Dissolutions", ["Grail", "Moon"], ["Bosk", "Horomachistry"], ["Ereb", "Mettle"])
 const hammer = skillFactory("Disciplines of the Hammer", ["Edge", "Forge"], ["Illumination", "Nyctodromy"], ["Mettle", "Shapt"])
-const scar = skillFactory("Disciplines of the Scar", ["Edge", "Lantern"], ["Hushery", "Illumination"], ["Triss", "Phost"])
+const scar = skillFactory("Disciplines of the Scar", ["Edge", "Lantern"], ["Hushery", "Illumination"], ["Trist", "Phost"])
 const door = skillFactory("Door and Wall", ["Knock", "Forge"], ["Horomachistry", "Nyctodromy"], ["Fet", "Shapt"])
-const drums = skillFactory("Drums and Dances", ["Heart", "Nectar"], ["Bosk", "Horomachistry"], ["Heart", "Mettle"])
+const drums = skillFactory("Drums and Dances", ["Heart", "Nectar"], ["Bosk", "Horomachistry"], ["Health", "Mettle"])
 const inviolable = skillFactory("Edicts Inviolable", ["Heart", "Moon"], ["Horomachistry", "Preservation"], ["Mettle", "Chor"])
 const liminal = skillFactory("Edicts Liminal", ["Moth", "Knock"], ["Nyctodromy", "Skolekosophy"], ["Fet", "Ereb"])
 const martial = skillFactory("Edicts Martial", ["Moon", "Edge"], ["Horomachistry", "Illumination"], ["Mettle", "Phost"])
-const fur = skillFactory("Furs and Feathers", ["Sky", "Scale"], ["Bosk", "Nyctodromy"], ["Heart", "Fet"])
+const fur = skillFactory("Furs and Feathers", ["Sky", "Scale"], ["Bosk", "Nyctodromy"], ["Health", "Fet"])
 
 
 const skillList = [anbary,applebright, auroral, bells, coil, desires, hammer, scar, door, drums, inviolable, liminal, martial, fur]

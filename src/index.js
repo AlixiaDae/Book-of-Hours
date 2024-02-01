@@ -216,18 +216,86 @@ function createSkillsTab(list, box) {
         wisdomOne.textContent = list[i].wisdoms[0]
         const wisdomTwo = document.createElement("div")
         wisdomTwo.textContent = list[i].wisdoms[1]
+        addClass([wisdomOne, wisdomTwo], "wisdom")
 
         const attunablesContainer = document.createElement("div")
         const atOne = document.createElement("div")
         atOne.textContent = list[i].attunables[0]
         const atTwo = document.createElement("div")
         atTwo.textContent = list[i].attunables[1]
+        addClass([atOne, atTwo], "attunables")
 
         wisdomContainer.append(wisdomOne, wisdomTwo)
         attunablesContainer.append(atOne, atTwo)
         container.append(name, principles, wisdomContainer, attunablesContainer)
         box.appendChild(container)
     }
+}
+
+function addClass(list, type) {
+    for(let i = 0; i < list.length; i++) {
+    if(type === "wisdom") {
+        switch(list[i].textContent) {
+            case "Preservation" :
+                list[i].classList.add("preser")
+                break;
+            case "Horomachistry" :
+                list[i].classList.add("horo")
+                break;
+            case "Birdsong" :
+                list[i].classList.add("bird")
+                break;
+            case "Ithastry" :
+                list[i].classList.add("itha")
+                break;
+            case "Illumination" :
+                list[i].classList.add("illu")
+                break;
+            case "Hushery" :
+                list[i].classList.add("hushery")
+                break;
+            case "Nyctodromy" :
+                list[i].classList.add("nycto")
+                break;
+            case "Skolekosophy" :
+                list[i].classList.add("skole")
+                break;
+            case "Bosk" :
+                list[i].classList.add("bosk")
+                break;
+        }
+    } else if(type === "attunables") {
+        switch(list[i].textContent) {
+            case "Wist" : 
+                list[i].classList.add("wist")
+                break;
+            case "Phost" :
+                list[i].classList.add("phost")
+                break;
+            case "Health" :
+                list[i].classList.add("health")
+                break;
+            case "Mettle" :
+                list[i].classList.add("mettle")
+                break;
+            case "Trist" :
+                list[i].classList.add("trist")
+                break;
+            case "Ereb" :
+                list[i].classList.add("ereb")
+                break;
+            case "Fet" :
+                list[i].classList.add("fet")
+                break;
+            case "Shapt" :
+                list[i].classList.add("shapt")
+                break;
+            case "Chor" :
+                list[i].classList.add("chor")
+                break;
+        }
+    }
+}
 }
 
 
@@ -454,6 +522,18 @@ hushTab.addEventListener("click", () => {
 
 craftTab.addEventListener("click", () => {
     aspectTabs.forEach(tab => {
+        tab.classList.remove("active")
+    })
+})
+
+skillTab.addEventListener("click", () => {
+    aspectTabs.forEach(tab => {
+        tab.classList.remove("active")
+    })
+})
+
+skillTab.addEventListener("click", () => {
+    recipeTabs.forEach(tab => {
         tab.classList.remove("active")
     })
 })
