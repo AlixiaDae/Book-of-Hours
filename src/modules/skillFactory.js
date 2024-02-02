@@ -44,12 +44,12 @@ const resur = skillFactory("Resurgences and Emergences", ["Moth", "Grail"], ["Bo
 const rhyme = skillFactory("Rhyme and Remembrances", ["Winter", "Moon"], ["Birdsong", "Skolekosophy"], ["Trist", "Ereb"])
 const rites = skillFactory("Rites of the Roots", ["Nectar", "Moth"], ["Bosk", "Preservation"], ["Ereb", "Health"])
 const sacra = skillFactory("Sacra LImiae", ["Moth", "Sky"], ["Horomachistry", "Hushery"], ["Mettle", "Trist"])
-const solis = skillFactory("Sacra SOlis Invicti", ["Lantern", "Sky"], ["Horomachistry", "Illumination"], ["Fet", "Phost"])
+const solis = skillFactory("Sacra Solis Invicti", ["Lantern", "Sky"], ["Horomachistry", "Illumination"], ["Fet", "Phost"])
 const sand = skillFactory("Sand Stories", ["Rose", "Moon"], ["Birdsong", "Skolekosophy"], ["Trist", "Shapt"])
 const sea = skillFactory("Sea Stories", ["Moon", "Grail"], ["Birdsong", "Nyctodromy"], ["Chor", "Shapt"])
 const serp = skillFactory("Serpents and Venoms", ["Scale", "Moon"], ["Hushery", "Skolekosophy"], ["Trist", "Shapt"])
 const sharps = skillFactory("Sharps", ["Edge", "Moon"], ["Hushery", "Skolekosophy"], ["Wist", "Shapt"])
-const sickle = skillFactory("Sickl;e and Eclipse", ["Edge", "Moon"], ["Nyctodromy", "Preservation"], ["Shapt", "Chor"])
+const sickle = skillFactory("Sickle and Eclipse", ["Edge", "Moon"], ["Nyctodromy", "Preservation"], ["Shapt", "Chor"])
 const sights = skillFactory("Sights and Sensations", ["Sky", "Winter"], ["Hushery", "Nyctodromy"], ["Wist", "Fet"])
 const sky = skillFactory("Sky Stories", ["Sky", "Rose"], ["Birdsong", "Horomachistry"], ["Trist", "Fet"])
 const snow = skillFactory("Snow Stories", ["Winter", "Moon"], ["Birdsong", "Hushery"], ["Trist", "Wist"])
@@ -66,7 +66,19 @@ const watch = skillFactory("Watchman's Paradoxes", ["Lantern", "Sky"], ["Illumin
 const weaving = skillFactory("Weaving and Knotworking", ["Heart", "Moth"], ["Birdsong", "Bosk"], ["Chor", "Health"])
 const wolf = skillFactory("Wolf Stories", ["Moon", "Scale"], ["Birdsong", "Skolekosophy"], ["Trist" ,"Ereb"])
 
+const crack = skillFactory("Cracktrack", ["Nectar", "Scale"], ["Illumination", "Preservation"], ["Phost", "Chor"])
+const man = skillFactory("Deep Mandaic", ["Forge", "Lantern"], ["Horomachistry", "Ithastry"], ["Mettle", "Phost"])
+const eri = skillFactory("Ericapaean", ["Lantern", "Winter"], ["Hushery", "Illumination"], ["Trist", "Phost"])
+const fucine = skillFactory("Fucine", ["Heart", "Knock"], ["Hushery", "Ithastry"], ["Trist", "Wist"])
+const hyksos = skillFactory("Hyksos", ["Grail", "Edge"], ["Nyctodromy", "Skolekosophy"], ["Shapt", "Ereb"])
+const kern = skillFactory("Kernewek Henavek", ["Scale", "Forge"], ["Bosk", "Ithastry"], ["Health", "Wist"])
+const kill = skillFactory("Killasimi", ["Winter", "Moon"], ["Bosk", "Skolekosophy"], ["Health", "Ereb"])
+const ram = skillFactory("Ramsund", ["Moth", "Sky"], ["Birdsong", "Preservation"], ["Trist", "Chor"])
+const sab = skillFactory("Sabazine", ["Moth", "Lantern"], ["Birdsong", "Horomachistry"], ["Trist", "Fet"])
+const vak = skillFactory("Vak", ["Knock", "Rose"], ["Birdsong", "Nyctodromy"], ["Chor", "Fet"])
 
-const skillList = [anbary,applebright, auroral, bells, coil, desires, hammer, scar, door, drums, inviolable, liminal, martial, fur, glass, glaz, herbs, hill, horns, contain, power, revelation, insects, leaves, lock, magg, menis, orchid, ouran, path, pearl, penti, prelim, puri, putre, pyro, quench, ragged,resur, rhyme, rites, sacra, solis, sand, sea, serp, sharps, sickle, sights, sky, snow, solu, spices, stitch, stone, strings, surgeries, signs, trans, trid, watch, weaving, wolf]
+
+
+const skillList = [anbary,applebright, auroral, bells, coil, crack, man, desires, door, hammer, scar, drums,  inviolable, liminal, martial, eri, fucine, fur, glass, glaz, herbs, hill, horns, hyksos, contain, power, revelation, insects,kern, kill, ram,  leaves, lock, magg, menis, orchid, ouran, path, pearl, penti, prelim, puri, putre, pyro, quench, ragged,resur, rhyme, rites, sab, sacra, solis, sand, sea, serp, sharps, sickle, sights, sky, snow, solu, spices, stitch, stone, strings, surgeries, signs, trans, trid, vak, watch, weaving, wolf]
 
 export default skillList
