@@ -144,6 +144,9 @@ craftTab.addEventListener("click", () => {
     if(aspectListEl.classList.contains("visible")) aspectListEl.classList.remove("visible")
     craftListEl.classList.add("visible")
     contentBox.textContent = ""
+    recipeTabs[0].classList.add("active")
+    createHeaders("recipe")
+    createCraftTab(recipeList, "Beverages", contentBox)
 })
 
 const recipeTabs = document.querySelectorAll(".recipe-tab")
