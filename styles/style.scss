@@ -247,12 +247,21 @@ main {
     }
 
     .skill-grid {
-
+        div:first-child, div:nth-child(2) {
+            @include flexCenter(row, center, center)
+        }
         div:nth-child(3), div:nth-child(4) {
-            border: 1px solid black;
+            padding-right: 5rem;
+            padding-left: 5rem;
+            
+            div {
+                border-left: none;
+                border-right: none;
+                border-bottom: none;
+            }
+            
             div:first-child {
                 border-bottom: 1px solid black;
-                border-left: none;
             }
         }
 /*

@@ -293,12 +293,23 @@ main .skill-grid {
           }
   */
 }
+main .skill-grid div:first-child, main .skill-grid div:nth-child(2) {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 main .skill-grid div:nth-child(3), main .skill-grid div:nth-child(4) {
-  border: 1px solid black;
+  padding-right: 5rem;
+  padding-left: 5rem;
+}
+main .skill-grid div:nth-child(3) div, main .skill-grid div:nth-child(4) div {
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
 }
 main .skill-grid div:nth-child(3) div:first-child, main .skill-grid div:nth-child(4) div:first-child {
   border-bottom: 1px solid black;
-  border-left: none;
 }
 main .hush-container-grid div {
   padding-left: 2rem;
