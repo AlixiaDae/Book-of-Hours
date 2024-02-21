@@ -67,6 +67,7 @@ const labhitic = recipeFactory("Materials", "Labhitic Tincture", "Edge", "5 Edge
 const refulgin = recipeFactory("Materials", "Refulgin", "Lantern", "5 Lantern", ["Purifications and Exaltations", "Transformations and Liberations", "Sacra Solis Invicti", "Inks of Revelation"], "Any", "2 Lantern")
 const tanglebrag = recipeFactory("Materials", "Tanglebrag", "Moth", "5 Moth or 5 Lantern(Watchman's Paradoxes)", ["Edicts Liminal", "Resurgences and Emergences", "Rites of the Roots", "Weaving and Knotworking", "Watchman's Paradoxes"], "Any", ["Lantern", "Nectar", "Scale", "2 Moth"])
 const westcott = recipeFactory("Materials", "Westcott's Compounds", "Forge", "5 Moth or 5 Forge(Pyro/Meniscate/Spices)", ["Sacra Limiae", "Pyroglyphics", "Solutions and Separations", "Pyroglyphics", "Meniscate Reflections", "Spices and Savours"], "Any", ["Nectar", "Grail", "Lantern", "Moth", "2 Forge"])
+const glassfinger = recipeFactory("Materials", "Glassfinger Toxin", "Knock", "10 Knock or Scale", ["Door and Wall", "Edicts Liminal", "Solutions and Separations", "Surgeries and Exsanguinations", "Serpents and Venoms"], "Glassware", ["2 Forge", "2 Lantern", "4 Knock"], "Thing and Liquid")
 
 //Misc
 const loss = recipeFactory("Misc", "Loss", "Winter/Edge", "Discard anything at Sea's Edge", "N/A", "Sea's Edge", ["Edge", "Winter"])
@@ -79,7 +80,7 @@ const touch =recipeFactory("Misc", "Touch", "Forge", "Consider comfort furniture
 const sound = recipeFactory("Misc", "Sound", "Heart", ["Consider House Key", "Consider avian pets", "Consider Moth/Knock furniture", "Renounce at Well"], "N/A", "N/A", "Heart")
 
 
-const recipeList = [earth, occult, torgue, savage, wound, nameday, ascendant, curious, enduring, hive, moment, winning, thunderskin, wormwood, didumos, forbidden,horizon, invincible, quake, wind, tisane, cordials, eigengrau, rubywise, yewgall, solomon, leathy, ascite, calicite, malachite, serpent, skinshuck, perhibiate, stargall, catwink, perinculate, asimel, houndsgall, ashartine, marakat, nillycant, orpiment, porphyrine, uzult, mazarine, chronsichord, mommet, flushed, dearday, awakened, gervinite, labhitic, refulgin, tanglebrag, westcott, loss, scent, sight, sound, taste, touch, surmise, rumour]
+const recipeList = [earth, occult, torgue, savage, wound, nameday, ascendant, curious, enduring, hive, moment, winning, thunderskin, wormwood, didumos, forbidden,horizon, invincible, quake, wind, tisane, cordials, eigengrau, rubywise, yewgall, solomon, leathy, ascite, calicite, malachite, serpent, skinshuck, perhibiate, stargall, catwink, perinculate, asimel, houndsgall, ashartine, marakat, nillycant, orpiment, porphyrine, uzult, mazarine, chronsichord, mommet, flushed, dearday, awakened, gervinite, glassfinger, labhitic, refulgin, tanglebrag, westcott, loss, scent, sight, sound, taste, touch, surmise, rumour]
 
 
 export default recipeList
