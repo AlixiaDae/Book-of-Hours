@@ -41,8 +41,8 @@ const loop = memoryFactory("numen: loopholes", ['knock', 'moon', 'moth'], [5,5,5
 const paths = memoryFactory("numen: the paths of the sun", ['forge', 'knock', 'lantern'], [5,5,5])
 const balance = memoryFactory("numen: back into balance", ['heart', 'sky', 'winter'], [5,5,5])
 const bells = memoryFactory("numen: the bells of ys", ["edge", "forge", "rose"], [5,5,5])
-const alteration = memoryFactory("numen: merciless alteration", ["edge", "forge", "grail"], [5,5,5])
+const feast = memoryFactory("numen: the irresistible feast", ["edge", "grail", "nectar"], [5,5,5])
 
-const memoryList = [regret, foresight, revelation, satisfaction, solace, cheerful, gossip, beguiling, fear, contradiction, stolen, salt, secret, pattern, intuition, confounding, hindsight, storm, impulse, earth, bittersweet, torgue, nameday, winning, curious, old, wistful, savage, sun, merciless, inescapable, weaving, lost, counterfeit, final, loop, paths, balance, bells, alteration]
+const memoryList = [regret, foresight, revelation, satisfaction, solace, cheerful, gossip, beguiling, fear, contradiction, stolen, salt, secret, pattern, intuition, confounding, hindsight, storm, impulse, earth, bittersweet, torgue, nameday, winning, curious, old, wistful, savage, sun, merciless, inescapable, weaving, lost, counterfeit, final, loop, paths, balance, bells, feast]
 
 export default memoryList
