@@ -75,7 +75,7 @@ const rumour = recipeFactory("Misc", "Wind-Rumour", "Sky", "Talk to Gull", "N/A"
 const scent = recipeFactory("Misc", "Scent", "Nectar", "Paradise Palm/Red Practice Sword/Red Quarterstaff/Watchful Potted Plant", "N/A", "N/A", "Nectar")
 const sight = recipeFactory("Misc", "Sight", "Lantern", "Consider any bust", "N/A", "N/A", "Lantern")
 const surmise = recipeFactory("Misc", "Wild Surmise", "Lantern/Moth/Sky", "Consider Historywax Candle", "N/A", "N/A", ["3 Lantern", "3 Moth", "3 Sky"], "Evolve via Ithastry")
-const taste = recipeFactory("Misc", "Taste", "Grail", "Consume food or drink(preferably with grail aspect)", "N/A", "N/A")
+const taste = recipeFactory("Misc", "Taste", "Grail", "Consume food or drink(preferably with grail aspect)", "N/A", "Grail")
 const touch =recipeFactory("Misc", "Touch", "Forge", "Consider comfort furniture", "N/A", "N/A", "Forge")
 const sound = recipeFactory("Misc", "Sound", "Heart", ["Consider House Key", "Consider avian pets", "Consider Moth/Knock furniture", "Renounce at Well"], "N/A", "N/A", "Heart")
 
