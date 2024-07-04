@@ -83,17 +83,14 @@ function createHushTab(bookObject, box) {
     const bookNameContainer = document.createElement("div")
     bookNameContainer.classList.add("book")
     const bookName = document.createElement("p")
-    bookName.setAttribute("contenteditable", "true")
     bookName.textContent = bookObject.name
     const memoryNameContainer = document.createElement("div")
     memoryNameContainer.classList.add("memory")
     const memoryName = document.createElement("p")
     memoryName.textContent = bookObject.memoryName.charAt(0).toUpperCase() + bookObject.memoryName.slice(1)
-    memoryName.setAttribute("contenteditable", "true")
     const skillNameContainter = document.createElement("div")
     skillNameContainter.classList.add("skill")
     const skillName = document.createElement("p")
-    skillName.setAttribute("contenteditable", "true")
     skillName.textContent = bookObject.skillName
     
     bookNameContainer.append(bookName, addToStorage, removeBook)
@@ -114,30 +111,6 @@ function createHushTab(bookObject, box) {
         storage.deleteBook(bookName.textContent)
     })
 
-    bookName.addEventListener("keydown", (e) => {
-        if(e.key === "Enter") {
-            mainLibraryStorage.renameBook(bookObject.name, bookName.innerText)
-            storage.renameBook(bookObject.name, bookName.innerText)
-            e.preventDefault()
-            bookName.blur()
-        }
-    })
-
-    memoryName.addEventListener("keydown", (e) => {
-        if(e.key === "Enter") {
-            mainLibraryStorage.renameMemory(bookObject.name, memoryName.innerText.toLowerCase())
-            e.preventDefault()
-            memoryName.blur()
-        }
-    })
-
-    skillName.addEventListener("keydown", (e) => {
-        if(e.key === "Enter") {
-            mainLibraryStorage.renameSkill(bookObject.name, skillName.innerText)
-            e.preventDefault()
-            skillName.blur()
-        }
-    })
 }
 
 const craftTab = document.querySelector(".craft-tab") 
