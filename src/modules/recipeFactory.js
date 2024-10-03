@@ -981,7 +981,18 @@ const rosehip = recipeFactory(
   ["Rosehip Jam", "Cake Batter"],
   "N/A",
   "Kitchens",
-  [""]
+  ["Heart 2", "Rose"],
+  "Pudding"
+);
+const mushpot = recipeFactory(
+  "Food",
+  "Mushroom and Potato Bake",
+  "Heart/Moon/Nectar/Scale",
+  ["Mushrooms", "Potatoes"],
+  "N/A",
+  "Kitchens",
+  ["Heart", "Moon", "Nectar", "Scale"],
+  "Main Course"
 );
 
 const recipeList = [
@@ -1054,6 +1065,7 @@ const recipeList = [
   dough,
   cakeBatter,
   rosehip,
+  mushpot,
 ];
 
 export default recipeList;
