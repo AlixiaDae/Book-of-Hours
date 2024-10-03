@@ -12,6 +12,36 @@ const recipeFactory = (
 };
 
 //Beverages
+const chalice = recipeFactory(
+  "Beverages",
+  "Fragrant Chalice Tea",
+  "Grail",
+  "Chalice Flowers",
+  "N/A",
+  "Kitchens",
+  ["Grail 2", "Nectar"],
+  "Brew in Kitchen Range"
+);
+const honeyscar = recipeFactory(
+  "Beverages",
+  "Honeyscar Jasmine Tea",
+  "Forge",
+  "Honeyscar Flowers",
+  "N/A",
+  "Kitchens",
+  ["Forge 2", "Rose", "Nectar"],
+  "Brew in Kitchen Range"
+);
+const blueCrown = recipeFactory(
+  "Beverages",
+  "Blue Crown Tea",
+  "Winter",
+  "Blue Crown Flowers",
+  "N/A",
+  "Kitchens",
+  ["Winter 2", "Sky 2"],
+  "Brew in Kitchen Range"
+);
 const tisane = recipeFactory(
   "Beverages",
   "Witching Tisane",
@@ -994,6 +1024,7 @@ const mushpot = recipeFactory(
   ["Heart", "Moon", "Nectar", "Scale"],
   "Main Course"
 );
+const poachedMack = recipeFactory("Food", "Poached Mackerel", "Grail/Heart/Moon", ["Mackerel"], "N/A", "Kitchens", ["Heart 2", "Forge", "Moon"], "First Course")
 
 const recipeList = [
   earth,
@@ -1066,6 +1097,11 @@ const recipeList = [
   cakeBatter,
   rosehip,
   mushpot,
+  chalice,
+  honeyscar,
+  blueCrown,
+  poachedMack,
+  
 ];
 
 export default recipeList;
