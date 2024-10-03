@@ -71,7 +71,7 @@ const glassfinger = recipeFactory("Materials", "Glassfinger Toxin", "Knock", "10
 
 //Animals
 
-const viper = recipeFactory("Animals", "Viper", "Knock 2/Scale 2 or Knock/Scale(Hungry)", "N/A", "N/A", "N/A", ["Earth-Sign(Nectar 2/Scale 2"], ["Evolve via Skolekosophy", "Omen"])
+const viper = recipeFactory("Animals", "Viper", "Knock 2/Scale 2 or Knock/Scale(Hungry)", "N/A", "N/A", "N/A", ["Earth-Sign(Nectar 2/Scale 2)"], ["Evolve via Skolekosophy", "Omen"])
 
 //Misc
 const loss = recipeFactory("Misc", "Loss", "Winter/Edge", "Discard anything at Sea's Edge", "N/A", "Sea's Edge", ["Edge", "Winter"])
