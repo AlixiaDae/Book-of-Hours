@@ -72,6 +72,9 @@ const glassfinger = recipeFactory("Materials", "Glassfinger Toxin", "Knock", "10
 //Animals
 
 const viper = recipeFactory("Animals", "Viper", "Knock 2/Scale 2 or Knock/Scale(Hungry)", "N/A", "N/A", "N/A", ["Earth-Sign(Nectar 2/Scale 2)"], ["Evolve via Skolekosophy", "Omen"])
+const dog = recipeFactory("Animals", "Dog", "Edge 2/Heart 2/Scale 2 or Edge/Heart/Scale(Hungry)", "N/A", "N/A", "N/A", ["Solace(Heart 2/Sky)"])
+const living = recipeFactory("Animals", "Living Relic", "Scale 4/Sky 2/Heart", "N/A", "N/A", "N/A", [])
+const gull = recipeFactory("Animals", "Gull", "Sky 2/Moon", "N/A", "N/A", "N/A", [])
 
 //Misc
 const loss = recipeFactory("Misc", "Loss", "Winter/Edge", "Discard anything at Sea's Edge", "N/A", "Sea's Edge", ["Edge", "Winter"])
@@ -84,7 +87,7 @@ const touch =recipeFactory("Misc", "Touch", "Forge", "Consider comfort furniture
 const sound = recipeFactory("Misc", "Sound", "Heart", ["Consider House Key", "Consider avian pets", "Consider Moth/Knock furniture", "Renounce at Well"], "N/A", "N/A", "Heart")
 
 
-const recipeList = [earth, occult, torgue, savage, wound, nameday, ascendant, curious, enduring, hive, moment, winning, thunderskin, wormwood, didumos, forbidden,horizon, invincible, quake, wind, tisane, cordials, eigengrau, rubywise, yewgall, solomon, leathy, ascite, calicite, malachite, serpent, skinshuck, perhibiate, stargall, catwink, perinculate, asimel, houndsgall, ashartine, marakat, nillycant, orpiment, porphyrine, uzult, mazarine, chronsichord, mommet, flushed, dearday, awakened, gervinite, glassfinger, labhitic, refulgin, tanglebrag, westcott, loss, scent, sight, sound, taste, touch, surmise, rumour, viper]
+const recipeList = [earth, occult, torgue, savage, wound, nameday, ascendant, curious, enduring, hive, moment, winning, thunderskin, wormwood, didumos, forbidden,horizon, invincible, quake, wind, tisane, cordials, eigengrau, rubywise, yewgall, solomon, leathy, ascite, calicite, malachite, serpent, skinshuck, perhibiate, stargall, catwink, perinculate, asimel, houndsgall, ashartine, marakat, nillycant, orpiment, porphyrine, uzult, mazarine, chronsichord, mommet, flushed, dearday, awakened, gervinite, glassfinger, labhitic, refulgin, tanglebrag, westcott, loss, scent, sight, sound, taste, touch, surmise, rumour, viper, dog]
 
 
 export default recipeList

@@ -5,6 +5,7 @@ export default class Storage {
     constructor(name) {
         this.name = name
     }
+    
     saveBooks(data) {
         localStorage.setItem(this.name, JSON.stringify(data))
     }

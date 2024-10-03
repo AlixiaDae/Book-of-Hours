@@ -202,6 +202,82 @@ main {
     .content {
         padding: 1rem;
         overflow: scroll;
+
+        .notes-box {
+            display: flex;
+            gap: 20px;
+            height: min-content;
+
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                width: 500px;
+    
+                .notes-area {
+                    resize: none;
+                    height: 100px;
+                 
+                    padding: .5rem;
+                    font-family: 'Poppins', 'sans-serif';
+                    border: 1px solid lightgrey;
+                    border-radius: 10px;
+    
+                    &:focus {
+                        outline: 1px solid black;
+                    }
+                }
+    
+                button {
+                    width: 60%;
+                    align-self: center;
+                    height: 30px;
+                    font-weight: 500;
+    
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+    
+            .notes {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                gap: 20px;
+
+                .note {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid grey;
+                    height: 70px;
+                    min-width: 140px;
+                    padding: 1rem;
+                    position: relative;
+                    border-radius: 10px;
+
+                    .delete-note {
+                        position: absolute;
+                        top: 2px;
+                        right: 2px;
+                        padding: 1px;
+                        border: none;
+                        border-radius: 10px;
+                        height: 20px;
+                        width: 20px;
+                        background-color: red;
+                        color: whitesmoke;
+
+                        &:hover {
+                            font-weight: bold;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+
     }
 
     .hush-content-headers, .content-headers, .craft-content-headers, .skill-content-headers, .hush-container-grid, .container-grid, .recipe-grid, .skill-grid {

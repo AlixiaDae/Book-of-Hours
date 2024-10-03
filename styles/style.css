@@ -183,6 +183,71 @@ main .content {
   padding: 1rem;
   overflow: scroll;
 }
+main .content .notes-box {
+  display: flex;
+  gap: 20px;
+  height: -moz-min-content;
+  height: min-content;
+}
+main .content .notes-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 500px;
+}
+main .content .notes-box form .notes-area {
+  resize: none;
+  height: 100px;
+  padding: 0.5rem;
+  font-family: "Poppins", "sans-serif";
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+}
+main .content .notes-box form .notes-area:focus {
+  outline: 1px solid black;
+}
+main .content .notes-box form button {
+  width: 60%;
+  align-self: center;
+  height: 30px;
+  font-weight: 500;
+}
+main .content .notes-box form button:hover {
+  cursor: pointer;
+}
+main .content .notes-box .notes {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+main .content .notes-box .notes .note {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid grey;
+  height: 70px;
+  min-width: 140px;
+  padding: 1rem;
+  position: relative;
+  border-radius: 10px;
+}
+main .content .notes-box .notes .note .delete-note {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  padding: 1px;
+  border: none;
+  border-radius: 10px;
+  height: 20px;
+  width: 20px;
+  background-color: red;
+  color: whitesmoke;
+}
+main .content .notes-box .notes .note .delete-note:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
 main .hush-content-headers, main .content-headers, main .craft-content-headers, main .skill-content-headers, main .hush-container-grid, main .container-grid, main .recipe-grid, main .skill-grid {
   display: grid;
   text-align: center;
