@@ -86,7 +86,7 @@ const bookArray = [
   new Book("De Horis Book 1", "impulse", "Rites of the Roots"),
   new Book("De Horis Book 2", "foresight", "Disciplines of the Hammer"),
   new Book("De Horis Book 3", "contradiction", "Disciplines of the Scar"),
-
+  new Book("De Ratio Quercuum", "earth-sign", "Rites of the Roots"),
   new Book(
     "A Catalogue of Uncharted Pleasures",
     "satisfaction",
@@ -606,7 +606,5 @@ const bookArray = [
 ];
 
 bookArray.forEach((book) => mainLibraryStorage.addBook(book));
-
-mainLibraryStorage.deleteBook("De Ratio Quercuum");
 
 export default mainLibraryStorage;
