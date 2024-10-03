@@ -607,6 +607,6 @@ const bookArray = [
 
 bookArray.forEach((book) => mainLibraryStorage.addBook(book));
 
-mainLibraryStorage.deleteBook("The Orchid's Transfigurations: Feast");
+//mainLibraryStorage.deleteBook("The Orchid's Transfigurations: Feast");
 
 export default mainLibraryStorage;
