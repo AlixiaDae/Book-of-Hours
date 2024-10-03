@@ -995,6 +995,16 @@ const dough = recipeFactory(
   "Kitchens",
   ["Heart"]
 );
+const bread = recipeFactory(
+  "Food",
+  "Bread",
+  "Heart",
+  ["Dough"],
+  "N/A",
+  "Kitchens",
+  ["Heart 2", "Edge", "Forge", "Nectar"],
+  "Side Dish"
+);
 const cakeBatter = recipeFactory(
   "Food",
   "Cake Batter",
@@ -1003,6 +1013,15 @@ const cakeBatter = recipeFactory(
   "N/A",
   "Kitchens",
   ["Heart"]
+);
+const batter = recipeFactory(
+  "Food",
+  "Batter",
+  "Heart/Edge",
+  ["Flour", "Water(Mist also works)"],
+  "N/A",
+  "Kitchens",
+  ["Edge", "Heart"]
 );
 const rosehip = recipeFactory(
   "Food",
@@ -1024,7 +1043,26 @@ const mushpot = recipeFactory(
   ["Heart", "Moon", "Nectar", "Scale"],
   "Main Course"
 );
-const poachedMack = recipeFactory("Food", "Poached Mackerel", "Grail/Heart/Moon", ["Mackerel"], "N/A", "Kitchens", ["Heart 2", "Forge", "Moon"], "First Course")
+const poachedMack = recipeFactory(
+  "Food",
+  "Poached Mackerel",
+  "Grail/Heart/Moon",
+  ["Mackerel"],
+  "N/A",
+  "Kitchens",
+  ["Heart 2", "Forge", "Moon"],
+  "First Course"
+);
+const onionRings = recipeFactory(
+  "Food",
+  "Onion Rings",
+  "Heart",
+  ["Basket of Onions", "Batter"],
+  "N/A",
+  "Kitchens",
+  ["Heart 2", "Grail", "Edge", "Nectar"],
+  "Side Dish"
+);
 
 const recipeList = [
   earth,
@@ -1101,7 +1139,9 @@ const recipeList = [
   honeyscar,
   blueCrown,
   poachedMack,
-  
+  batter,
+  onionRings,
+  bread,
 ];
 
 export default recipeList;
