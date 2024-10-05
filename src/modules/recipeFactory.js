@@ -761,6 +761,22 @@ const dearday = recipeFactory(
 );
 
 //Material
+const xanthotic = recipeFactory(
+  "Materials",
+  "Xanthotic Essence",
+  "Lantern",
+  "Lantern 10/Sky 10(Anbary and Lapidary), Liquid",
+  [
+    "Auroral Contemplations",
+    "Purifications and Exaltations",
+    "Pyroglyphics",
+    "Transformations and Liberations",
+    "Anbary and Lapidary",
+  ],
+  "Glassware",
+  ["Lantern 5", "Knock 2", "Forge 2"],
+  "Needed for Uzult"
+);
 const awakened = recipeFactory(
   "Materials",
   "Awakened Feather",
@@ -990,7 +1006,7 @@ const dough = recipeFactory(
   "Food",
   "Dough",
   "Heart",
-  ["Flour", "Butter/Milk"],
+  ["Flour", "Butter/Milk", "Bowls"],
   "N/A",
   "Kitchens",
   ["Heart"]
@@ -1063,8 +1079,299 @@ const onionRings = recipeFactory(
   ["Heart 2", "Grail", "Edge", "Nectar"],
   "Side Dish"
 );
+const pilchardToast = recipeFactory(
+  "Food",
+  "Pilchards on Toast",
+  "Heart",
+  ["Crusty Bread", "Pilchards"],
+  "N/A",
+  "Kitchens",
+  ["Heart", "Moon", "Nectar"],
+  "First Course"
+);
+
+const seapie = recipeFactory(
+  "Food",
+  "Sea Pie",
+  "Forge",
+  "N/A",
+  "N/A",
+  "Kitchens",
+  ["Forge"],
+  "Main Course"
+);
+const kingsluck = recipeFactory(
+  "Food",
+  "Kingsluck Pie",
+  "Not Rose or Edge",
+  ["Seapie", "Pears"],
+  "N/A",
+  "Kitchens",
+  [
+    "Forge 2",
+    "Grail 2",
+    "Heart 2",
+    "Knock",
+    "Lantern",
+    "Scale",
+    "Moth",
+    "Nectar",
+  ],
+  "Main Course"
+);
+
+const creamedSugar = recipeFactory(
+  "Food",
+  "Creamed Sugar",
+  "N/A",
+  ["Sugar", "Butter"],
+  "N/A",
+  "Kitchens",
+  ["Heart"]
+);
+const fudge = recipeFactory(
+  "Food",
+  "Fudge",
+  "Grail",
+  ["Creamed Sugar"],
+  "N/A",
+  "Kitchens",
+  ["Grail 3"],
+  "Pudding"
+);
+const leekSoup = recipeFactory(
+  "Food",
+  "Leek Soup",
+  "Edge/Moon/Nectar",
+  ["Leek", "Drippings"],
+  "N/A",
+  "Kitchens",
+  ["Edge", "Moon", "Nectar"],
+  "First Course"
+);
+
+const meringue = recipeFactory(
+  "Food",
+  "Meringue",
+  "Heart",
+  ["Egg", "Sugar"],
+  "N/A",
+  "Kitchens",
+  ["Heart 2", "Grail", "Sky", "Winter"]
+);
+const floatingIsland = recipeFactory(
+  "Food",
+  "Floating Island",
+  "Grail/Heart",
+  ["Milk", "Meringue"],
+  "N/A",
+  "Kitchens",
+  ["Grail 2", "Heart 2", "Rose", "Sky"],
+  "Pudding"
+);
+
+const roastBeef = recipeFactory(
+  "Food",
+  "Roast Beef",
+  "Heart/Scale",
+  ["Beef"],
+  "N/A",
+  "Kitchens",
+  ["Heart 2", "Scale 2", "Forge", "Lantern"],
+  "Main Course"
+);
+const dripping = recipeFactory(
+  "Food",
+  "Dripping",
+  "Heart",
+  ["Make Beef Joint", "Make Marinated Roast Beef"],
+  "N/A",
+  "Kitchens",
+  ["Heart"]
+);
+
+const yorkshire = recipeFactory(
+  "Food",
+  "Yorkshire Pudding",
+  "Heart/Nectar",
+  ["Dripping", "Batter"],
+  "N/A",
+  "Kitchens",
+  ["Heart 2", "Nectar"],
+  "Side Dish"
+);
+
+const pruneWhip = recipeFactory(
+  "Food",
+  "Prune Whip",
+  "Grail/Heart",
+  ["Egg", "Plums"],
+  "N/A",
+  "Kitchens",
+  ["Heart 2", "Grail", "Nectar"],
+  "Pudding"
+);
+
+const applePie = recipeFactory(
+  "Food",
+  "Apple Pie",
+  "Heart",
+  ["Apples", "Dough", "Scales"],
+  "N/A",
+  "Kitchens",
+  ["Heart 2", "Nectar", "Grail", "Forge"],
+  "Pudding"
+);
+const blackberryCake = recipeFactory(
+  "Food",
+  "Blackberry Jame Sponge Cake",
+  "",
+  ["Blackberry Jam", "Cake Batter"],
+  "N/A",
+  "Kitchens",
+  ["Grail 2", "Heart 2", "Nectar", "Rose"],
+  "Pudding"
+);
+
+const mackarelMonte = recipeFactory(
+  "Food",
+  "Mackarel Monte Carlo",
+  "Heart",
+  ["Mackerel", "Boiled Egg"],
+  "N/A",
+  "Kitchens",
+  ["Heart 2", "Moon", "Scale", "Sky"],
+  "First Course"
+);
+
+const juggedPheasant = recipeFactory(
+  "Food",
+  "Jugged Pheasant",
+  "Heart",
+  ["Butter", "Pheasant"],
+  "N/A",
+  "Kitchens",
+  ["Heart 2", "Rose", "Scale", "Sky", "Edge", "Grail"],
+  "Main Course"
+);
+
+const coldPheasant = recipeFactory(
+  "Food",
+  "Cold Pheasant with Grape Salad",
+  "Grail",
+  ["Grapes", "Pheasant"],
+  "N/A",
+  "Kitchens",
+  ["Grail", "Heart", "Nectar", "Rose", "Sky"],
+  "First Course"
+);
+const eggCroquette = recipeFactory(
+  "Food",
+  "Egg Croquettes",
+  "Sky/Scale",
+  ["Egg", "Crusty Bread"],
+  "N/A",
+  "Kitchens",
+  ["Sky 2", "Scale 2", "Heart", "Forge", "Edge"],
+  "Side Dish"
+);
+
+const roastPotatoes = recipeFactory(
+  "Food",
+  "Roast Potatoes",
+  "Heart",
+  ["Drippings", "Potatoes"],
+  "N/A",
+  "Kitchens",
+  ["Heart 2", "Grail", "Forge", "Edge"],
+  "Side Dish"
+);
+const stuffedMarrow = recipeFactory(
+  "Food",
+  "Golden Stuffed Marrow",
+  "Heart/Nectar",
+  ["Golden Marrow", "Knife"],
+  "N/A",
+  "Kitchens",
+  ["Heart 2", "Nectar 2", "Lantern"],
+  "Main Course or First Course"
+);
+
+const marinatedBeef = recipeFactory(
+  "Food",
+  "Marinated Beef",
+  "Heart",
+  ["Any Wine", "Beef"],
+  "N/A",
+  "Kitchens",
+  ["Heart"]
+);
+const marinatedRoastBeef = recipeFactory(
+  "Food",
+  "Marinated Roast Beef",
+  "Heart/Scale",
+  ["Marinated Beef"],
+  "N/A",
+  "Kitchens",
+  ["Heart 2", "Scale 2", "Forge", "Grail", "Edge"],
+  "Main Course"
+);
+const steamedVege = recipeFactory(
+  "Food",
+  "Steamed Spring Vegetable Pie",
+  "Nectar/Heart",
+  ["Sack of Vegetables", "Dough"],
+  "N/A",
+  "Kitchens",
+  ["Nectar 2", "Heart 2", "Forge", "Rose"],
+  "Main Course"
+);
+const stickyToffee = recipeFactory(
+  "Food",
+  "Sticky Toffee Pudding",
+  "Heart/Grail",
+  ["Crusty Bread", "Creamed Sugar"],
+  "N/A",
+  "Kitchens",
+  ["Heart 2", "Grail 2"],
+  "Pudding"
+);
+const rosehipJam = recipeFactory(
+  "Food",
+  "Rosehip Jam",
+  "",
+  ["Rosehip", "Sugar"],
+  "N/A",
+  "Kitchens",
+  [""]
+);
 
 const recipeList = [
+  rosehipJam,
+  stickyToffee,
+  steamedVege,
+  marinatedRoastBeef,
+  marinatedBeef,
+  stuffedMarrow,
+  roastPotatoes,
+  eggCroquette,
+  blackberryCake,
+  coldPheasant,
+  juggedPheasant,
+  mackarelMonte,
+  applePie,
+  creamedSugar,
+  fudge,
+  leekSoup,
+  pruneWhip,
+  yorkshire,
+  dripping,
+  roastBeef,
+  kingsluck,
+  meringue,
+  floatingIsland,
+  seapie,
+  pilchardToast,
   earth,
   occult,
   torgue,
@@ -1087,6 +1394,7 @@ const recipeList = [
   wind,
   tisane,
   cordials,
+  xanthotic,
   eigengrau,
   rubywise,
   yewgall,
