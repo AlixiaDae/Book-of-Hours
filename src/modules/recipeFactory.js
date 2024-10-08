@@ -761,6 +761,21 @@ const dearday = recipeFactory(
 );
 
 //Material
+const iotic = recipeFactory(
+  "Materials",
+  "Iotic Essence",
+  "Forge",
+  "Forge 10, Liquid",
+  [
+    "Anbary and Lapidary",
+    "Meniscate Reflections",
+    "Pyroglyphics",
+    "Spices and Savors",
+    "Transformations and Liberations",
+  ],
+  "Glassware",
+  ["Forge 5", "Lantern 3"]
+);
 const xanthotic = recipeFactory(
   "Materials",
   "Xanthotic Essence",
@@ -1339,14 +1354,27 @@ const stickyToffee = recipeFactory(
 const rosehipJam = recipeFactory(
   "Food",
   "Rosehip Jam",
-  "",
+  "Rose",
   ["Rosehip", "Sugar"],
   "N/A",
   "Kitchens",
-  [""]
+  ["Rose 2", "Heart", "Nectar"]
+);
+
+const appleCharlotte = recipeFactory(
+  "Food",
+  "Apple Charlotte",
+  "Grail",
+  ["Apples", "Crusty Bread", "Spices"],
+  "N/A",
+  "Kitchens",
+  ["Heart 2", "Grail", "Nectar", "Rose"],
+  "Pudding"
 );
 
 const recipeList = [
+  appleCharlotte,
+  iotic,
   rosehipJam,
   stickyToffee,
   steamedVege,
