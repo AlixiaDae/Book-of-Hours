@@ -897,6 +897,17 @@ const glassfinger = recipeFactory(
 
 //Animals
 
+const gull = recipeFactory(
+  "Animals",
+  "Pet Gull",
+  "Sky",
+  "N/A",
+  "N/A",
+  "N/A",
+  ["Sky 2", "Heart"],
+  "Evolve via Birdsong, Omen"
+);
+
 const viper = recipeFactory(
   "Animals",
   "Viper",
@@ -925,15 +936,7 @@ const living = recipeFactory(
   "N/A",
   []
 );
-const gull = recipeFactory(
-  "Animals",
-  "Gull",
-  "Sky 2/Moon",
-  "N/A",
-  "N/A",
-  "N/A",
-  []
-);
+
 
 //Misc
 const loss = recipeFactory(
@@ -1373,6 +1376,7 @@ const appleCharlotte = recipeFactory(
 );
 
 const recipeList = [
+  gull,
   appleCharlotte,
   iotic,
   rosehipJam,

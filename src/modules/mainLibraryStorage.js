@@ -603,6 +603,7 @@ const bookArray = [
     "The Great Signs and the Great Scars"
   ),
   new Book("The Book of the White Cat", "revelation", "Watchman's Paradoxes"),
+  new Book("The Book of Masks", "impulse", "Weaving and Knotworking")
 ];
 
 bookArray.forEach((book) => mainLibraryStorage.addBook(book));
