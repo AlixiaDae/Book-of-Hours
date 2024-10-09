@@ -761,6 +761,23 @@ const dearday = recipeFactory(
 );
 
 //Material
+
+const ichorAuroral = recipeFactory(
+  "Materials",
+  "Ichor Auroral",
+  "Lantern",
+  "Rose 10(Auroral/Inks/Sand), Sky 10(Signs/Watchman's",
+  [
+    "Auroral Contemplations",
+    "Inks of Power",
+    "Sand Stories",
+    "Sights and Sensations",
+    "Watchman's Paradoxes",
+  ],
+  "Any that accepts Light",
+  ["Lantern 4", "Rose 2"]
+);
+
 const iotic = recipeFactory(
   "Materials",
   "Iotic Essence",
@@ -936,7 +953,6 @@ const living = recipeFactory(
   "N/A",
   []
 );
-
 
 //Misc
 const loss = recipeFactory(
@@ -1208,6 +1224,17 @@ const dripping = recipeFactory(
   ["Heart"]
 );
 
+const chips = recipeFactory(
+  "Food",
+  "Game Chips",
+  "Heart",
+  ["Potatoes", "Dripping", "Knives"],
+  "N/A",
+  "Kitchens",
+  ["Heart 2", "Knock", "Forge", "Edge"],
+  "Side Dish"
+);
+
 const yorkshire = recipeFactory(
   "Food",
   "Yorkshire Pudding",
@@ -1242,7 +1269,7 @@ const applePie = recipeFactory(
 );
 const blackberryCake = recipeFactory(
   "Food",
-  "Blackberry Jame Sponge Cake",
+  "Blackberry Jam Sponge Cake",
   "",
   ["Blackberry Jam", "Cake Batter"],
   "N/A",
@@ -1375,7 +1402,21 @@ const appleCharlotte = recipeFactory(
   "Pudding"
 );
 
+const pumpkinPie = recipeFactory(
+  "Food",
+  "Pumpkin Pie",
+  "Forge",
+  ["Pumpkin", "Dough", "Spices"],
+  "N/A",
+  "Kitchens",
+  ["Forge", "Heart", "Nectar"],
+  "Pudding or Main Course"
+);
+
 const recipeList = [
+  ichorAuroral,
+  pumpkinPie,
+  chips,
   gull,
   appleCharlotte,
   iotic,
