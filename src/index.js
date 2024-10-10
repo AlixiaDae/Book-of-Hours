@@ -390,6 +390,7 @@ function createNotesTab() {
     if (textarea.value == "") return;
     const newNote = new Note(textarea.value);
     noteStorage.addNote(newNote);
+    textarea.value = "";
     loadNotes();
   });
 
@@ -425,7 +426,7 @@ function createNotes(box) {
 
 function loadNotes() {
   const notes = document.querySelector(".notes");
-  notes.textContent = ""
+  notes.textContent = "";
   createNotes(notes);
 }
 
