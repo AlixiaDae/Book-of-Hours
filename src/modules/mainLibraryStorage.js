@@ -608,6 +608,4 @@ const bookArray = [
 
 bookArray.forEach((book) => mainLibraryStorage.addBook(book));
 
-mainLibraryStorage.deleteBook("Towards A Fundamental Aesthetic")
-
 export default mainLibraryStorage;
