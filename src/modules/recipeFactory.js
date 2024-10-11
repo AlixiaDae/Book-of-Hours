@@ -659,7 +659,7 @@ const wind = recipeFactory(
 );
 const wormwood = recipeFactory(
   "Memories",
-  "Womrwood Dream",
+  "Wormwood Dream",
   "Winter",
   [
     "10 Moon(Edicts Martial)",
@@ -1045,6 +1045,27 @@ const dough = recipeFactory(
   "Kitchens",
   ["Heart"]
 );
+
+const cakeBatter = recipeFactory(
+  "Food",
+  "Cake Batter",
+  "Heart",
+  ["Dough", "Egg"],
+  "N/A",
+  "Kitchens",
+  ["Heart"]
+);
+
+const batter = recipeFactory(
+  "Food",
+  "Batter",
+  "Heart/Edge",
+  ["Flour", "Water(Mist also works)"],
+  "N/A",
+  "Kitchens",
+  ["Edge", "Heart"]
+);
+
 const bread = recipeFactory(
   "Food",
   "Bread",
@@ -1055,44 +1076,69 @@ const bread = recipeFactory(
   ["Heart 2", "Edge", "Forge", "Nectar"],
   "Side Dish"
 );
-const cakeBatter = recipeFactory(
+
+const creamedSugar = recipeFactory(
   "Food",
-  "Cake Batter",
-  "Heart",
-  ["Dough", "Egg"],
+  "Creamed Sugar",
+  "N/A",
+  ["Sugar", "Butter"],
   "N/A",
   "Kitchens",
   ["Heart"]
 );
-const batter = recipeFactory(
+
+const meringue = recipeFactory(
   "Food",
-  "Batter",
-  "Heart/Edge",
-  ["Flour", "Water(Mist also works)"],
+  "Meringue",
+  "Heart",
+  ["Egg", "Sugar"],
   "N/A",
   "Kitchens",
-  ["Edge", "Heart"]
+  ["Heart 2", "Grail", "Sky", "Winter"]
 );
-const rosehip = recipeFactory(
+
+const dripping = recipeFactory(
   "Food",
-  "Rosehip Jam Sponge Cake",
-  "Heart/Rose",
-  ["Rosehip Jam", "Cake Batter"],
+  "Dripping",
+  "Heart",
+  ["Make Beef Joint", "Make Marinated Roast Beef"],
   "N/A",
   "Kitchens",
-  ["Heart 2", "Rose"],
-  "Pudding"
+  ["Heart"]
 );
-const mushpot = recipeFactory(
+
+const marinatedBeef = recipeFactory(
   "Food",
-  "Mushroom and Potato Bake",
-  "Heart/Moon/Nectar/Scale",
-  ["Mushrooms", "Potatoes"],
+  "Marinated Beef",
+  "Heart",
+  ["Any Wine", "Beef"],
   "N/A",
   "Kitchens",
-  ["Heart", "Moon", "Nectar", "Scale"],
-  "Main Course"
+  ["Heart"]
 );
+
+const rosehipJam = recipeFactory(
+  "Food",
+  "Rosehip Jam",
+  "Rose",
+  ["Rosehip", "Sugar"],
+  "N/A",
+  "Kitchens",
+  ["Rose 2", "Heart", "Nectar"]
+);
+
+const blackberryJam = recipeFactory(
+  "Food",
+  "Blackberry Jam",
+  "Heart",
+  ["Blackberries", "Sugar"],
+  "N/A",
+  "Kitchens",
+  ["Heart", "Grail", "Nectar", "Rose"]
+);
+
+// First Course
+
 const poachedMack = recipeFactory(
   "Food",
   "Poached Mackerel",
@@ -1103,16 +1149,7 @@ const poachedMack = recipeFactory(
   ["Heart 2", "Forge", "Moon"],
   "First Course"
 );
-const onionRings = recipeFactory(
-  "Food",
-  "Onion Rings",
-  "Heart",
-  ["Basket of Onions", "Batter"],
-  "N/A",
-  "Kitchens",
-  ["Heart 2", "Grail", "Edge", "Nectar"],
-  "Side Dish"
-);
+
 const pilchardToast = recipeFactory(
   "Food",
   "Pilchards on Toast",
@@ -1124,16 +1161,74 @@ const pilchardToast = recipeFactory(
   "First Course"
 );
 
-const seapie = recipeFactory(
+const leekSoup = recipeFactory(
   "Food",
-  "Sea Pie",
-  "Forge",
-  "N/A",
+  "Leek Soup",
+  "Edge/Moon/Nectar",
+  ["Leek", "Drippings"],
   "N/A",
   "Kitchens",
-  ["Forge"],
+  ["Edge", "Moon", "Nectar"],
+  "First Course"
+);
+
+const mackarelMonte = recipeFactory(
+  "Food",
+  "Mackarel Monte Carlo",
+  "Heart",
+  ["Mackerel", "Boiled Egg"],
+  "N/A",
+  "Kitchens",
+  ["Heart 2", "Moon", "Scale", "Sky"],
+  "First Course"
+);
+
+const coldPheasant = recipeFactory(
+  "Food",
+  "Cold Pheasant with Grape Salad",
+  "Grail",
+  ["Grapes", "Pheasant"],
+  "N/A",
+  "Kitchens",
+  ["Grail", "Heart", "Nectar", "Rose", "Sky"],
+  "First Course"
+);
+
+const stuffedMarrow = recipeFactory(
+  "Food",
+  "Golden Stuffed Marrow",
+  "Heart/Nectar",
+  ["Golden Marrow", "Knife"],
+  "N/A",
+  "Kitchens",
+  ["Heart 2", "Nectar 2", "Lantern"],
+  "First Course or Main Course"
+);
+
+const friedMushToast = recipeFactory(
+  "Food",
+  "Fried Mushrooms on Toast",
+  "Heart",
+  ["Mushrooms", "Crusty Bread", "Knife"],
+  "N/A",
+  "Kitchens",
+  ["Heart", "Moon", "Nectar", "Scale"],
+  "First Course"
+);
+
+// Main Course
+
+const mushpot = recipeFactory(
+  "Food",
+  "Mushroom and Potato Bake",
+  "Heart/Moon/Nectar/Scale",
+  ["Mushrooms", "Potatoes"],
+  "N/A",
+  "Kitchens",
+  ["Heart", "Moon", "Nectar", "Scale"],
   "Main Course"
 );
+
 const kingsluck = recipeFactory(
   "Food",
   "Kingsluck Pie",
@@ -1154,54 +1249,15 @@ const kingsluck = recipeFactory(
   "Main Course"
 );
 
-const creamedSugar = recipeFactory(
+const seapie = recipeFactory(
   "Food",
-  "Creamed Sugar",
+  "Sea Pie",
+  "Forge",
   "N/A",
-  ["Sugar", "Butter"],
   "N/A",
   "Kitchens",
-  ["Heart"]
-);
-const fudge = recipeFactory(
-  "Food",
-  "Fudge",
-  "Grail",
-  ["Creamed Sugar"],
-  "N/A",
-  "Kitchens",
-  ["Grail 3"],
-  "Pudding"
-);
-const leekSoup = recipeFactory(
-  "Food",
-  "Leek Soup",
-  "Edge/Moon/Nectar",
-  ["Leek", "Drippings"],
-  "N/A",
-  "Kitchens",
-  ["Edge", "Moon", "Nectar"],
-  "First Course"
-);
-
-const meringue = recipeFactory(
-  "Food",
-  "Meringue",
-  "Heart",
-  ["Egg", "Sugar"],
-  "N/A",
-  "Kitchens",
-  ["Heart 2", "Grail", "Sky", "Winter"]
-);
-const floatingIsland = recipeFactory(
-  "Food",
-  "Floating Island",
-  "Grail/Heart",
-  ["Milk", "Meringue"],
-  "N/A",
-  "Kitchens",
-  ["Grail 2", "Heart 2", "Rose", "Sky"],
-  "Pudding"
+  ["Forge"],
+  "Main Course"
 );
 
 const roastBeef = recipeFactory(
@@ -1214,14 +1270,50 @@ const roastBeef = recipeFactory(
   ["Heart 2", "Scale 2", "Forge", "Lantern"],
   "Main Course"
 );
-const dripping = recipeFactory(
+
+const juggedPheasant = recipeFactory(
   "Food",
-  "Dripping",
+  "Jugged Pheasant",
   "Heart",
-  ["Make Beef Joint", "Make Marinated Roast Beef"],
+  ["Butter", "Pheasant"],
   "N/A",
   "Kitchens",
-  ["Heart"]
+  ["Heart 2", "Rose", "Scale", "Sky", "Edge", "Grail"],
+  "Main Course"
+);
+
+const marinatedRoastBeef = recipeFactory(
+  "Food",
+  "Marinated Roast Beef",
+  "Heart/Scale",
+  ["Marinated Beef"],
+  "N/A",
+  "Kitchens",
+  ["Heart 2", "Scale 2", "Forge", "Grail", "Edge"],
+  "Main Course"
+);
+const steamedVege = recipeFactory(
+  "Food",
+  "Steamed Spring Vegetable Pie",
+  "Nectar/Heart",
+  ["Sack of Vegetables", "Dough"],
+  "N/A",
+  "Kitchens",
+  ["Nectar 2", "Heart 2", "Forge", "Rose"],
+  "Main Course"
+);
+
+// Side Dish
+
+const onionRings = recipeFactory(
+  "Food",
+  "Onion Rings",
+  "Heart",
+  ["Basket of Onions", "Batter"],
+  "N/A",
+  "Kitchens",
+  ["Heart 2", "Grail", "Edge", "Nectar"],
+  "Side Dish"
 );
 
 const chips = recipeFactory(
@@ -1246,70 +1338,6 @@ const yorkshire = recipeFactory(
   "Side Dish"
 );
 
-const pruneWhip = recipeFactory(
-  "Food",
-  "Prune Whip",
-  "Grail/Heart",
-  ["Egg", "Plums"],
-  "N/A",
-  "Kitchens",
-  ["Heart 2", "Grail", "Nectar"],
-  "Pudding"
-);
-
-const applePie = recipeFactory(
-  "Food",
-  "Apple Pie",
-  "Heart",
-  ["Apples", "Dough", "Scales"],
-  "N/A",
-  "Kitchens",
-  ["Heart 2", "Nectar", "Grail", "Forge"],
-  "Pudding"
-);
-const blackberryCake = recipeFactory(
-  "Food",
-  "Blackberry Jam Sponge Cake",
-  "",
-  ["Blackberry Jam", "Cake Batter"],
-  "N/A",
-  "Kitchens",
-  ["Grail 2", "Heart 2", "Nectar", "Rose"],
-  "Pudding"
-);
-
-const mackarelMonte = recipeFactory(
-  "Food",
-  "Mackarel Monte Carlo",
-  "Heart",
-  ["Mackerel", "Boiled Egg"],
-  "N/A",
-  "Kitchens",
-  ["Heart 2", "Moon", "Scale", "Sky"],
-  "First Course"
-);
-
-const juggedPheasant = recipeFactory(
-  "Food",
-  "Jugged Pheasant",
-  "Heart",
-  ["Butter", "Pheasant"],
-  "N/A",
-  "Kitchens",
-  ["Heart 2", "Rose", "Scale", "Sky", "Edge", "Grail"],
-  "Main Course"
-);
-
-const coldPheasant = recipeFactory(
-  "Food",
-  "Cold Pheasant with Grape Salad",
-  "Grail",
-  ["Grapes", "Pheasant"],
-  "N/A",
-  "Kitchens",
-  ["Grail", "Heart", "Nectar", "Rose", "Sky"],
-  "First Course"
-);
 const eggCroquette = recipeFactory(
   "Food",
   "Egg Croquettes",
@@ -1331,64 +1359,73 @@ const roastPotatoes = recipeFactory(
   ["Heart 2", "Grail", "Forge", "Edge"],
   "Side Dish"
 );
-const stuffedMarrow = recipeFactory(
-  "Food",
-  "Golden Stuffed Marrow",
-  "Heart/Nectar",
-  ["Golden Marrow", "Knife"],
-  "N/A",
-  "Kitchens",
-  ["Heart 2", "Nectar 2", "Lantern"],
-  "Main Course or First Course"
-);
 
-const marinatedBeef = recipeFactory(
+// Pudding
+
+const rosehipCake = recipeFactory(
   "Food",
-  "Marinated Beef",
-  "Heart",
-  ["Any Wine", "Beef"],
+  "Rosehip Jam Sponge Cake",
+  "Heart/Rose",
+  ["Rosehip Jam", "Cake Batter"],
   "N/A",
   "Kitchens",
-  ["Heart"]
-);
-const marinatedRoastBeef = recipeFactory(
-  "Food",
-  "Marinated Roast Beef",
-  "Heart/Scale",
-  ["Marinated Beef"],
-  "N/A",
-  "Kitchens",
-  ["Heart 2", "Scale 2", "Forge", "Grail", "Edge"],
-  "Main Course"
-);
-const steamedVege = recipeFactory(
-  "Food",
-  "Steamed Spring Vegetable Pie",
-  "Nectar/Heart",
-  ["Sack of Vegetables", "Dough"],
-  "N/A",
-  "Kitchens",
-  ["Nectar 2", "Heart 2", "Forge", "Rose"],
-  "Main Course"
-);
-const stickyToffee = recipeFactory(
-  "Food",
-  "Sticky Toffee Pudding",
-  "Heart/Grail",
-  ["Crusty Bread", "Creamed Sugar"],
-  "N/A",
-  "Kitchens",
-  ["Heart 2", "Grail 2"],
+  ["Heart 2", "Rose"],
   "Pudding"
 );
-const rosehipJam = recipeFactory(
+
+const fudge = recipeFactory(
   "Food",
-  "Rosehip Jam",
-  "Rose",
-  ["Rosehip", "Sugar"],
+  "Fudge",
+  "Grail",
+  ["Creamed Sugar"],
   "N/A",
   "Kitchens",
-  ["Rose 2", "Heart", "Nectar"]
+  ["Grail 3"],
+  "Pudding"
+);
+
+const floatingIsland = recipeFactory(
+  "Food",
+  "Floating Island",
+  "Grail/Heart",
+  ["Milk", "Meringue"],
+  "N/A",
+  "Kitchens",
+  ["Grail 2", "Heart 2", "Rose", "Sky"],
+  "Pudding"
+);
+
+const pruneWhip = recipeFactory(
+  "Food",
+  "Prune Whip",
+  "Grail/Heart",
+  ["Egg", "Plums"],
+  "N/A",
+  "Kitchens",
+  ["Heart 2", "Grail", "Nectar"],
+  "Pudding"
+);
+
+const applePie = recipeFactory(
+  "Food",
+  "Apple Pie",
+  "Heart",
+  ["Apples", "Dough", "Scales"],
+  "N/A",
+  "Kitchens",
+  ["Heart 2", "Nectar", "Grail", "Forge"],
+  "Pudding"
+);
+
+const blackberryCake = recipeFactory(
+  "Food",
+  "Blackberry Jam Sponge Cake",
+  "",
+  ["Blackberry Jam", "Cake Batter"],
+  "N/A",
+  "Kitchens",
+  ["Grail 2", "Heart 2", "Nectar", "Rose"],
+  "Pudding"
 );
 
 const appleCharlotte = recipeFactory(
@@ -1413,38 +1450,59 @@ const pumpkinPie = recipeFactory(
   "Pudding or Main Course"
 );
 
+const stickyToffee = recipeFactory(
+  "Food",
+  "Sticky Toffee Pudding",
+  "Heart/Grail",
+  ["Crusty Bread", "Creamed Sugar"],
+  "N/A",
+  "Kitchens",
+  ["Heart 2", "Grail 2"],
+  "Pudding"
+);
+
 const recipeList = [
-  ichorAuroral,
-  pumpkinPie,
-  chips,
-  gull,
-  appleCharlotte,
-  iotic,
-  rosehipJam,
-  stickyToffee,
-  steamedVege,
-  marinatedRoastBeef,
-  marinatedBeef,
-  stuffedMarrow,
-  roastPotatoes,
-  eggCroquette,
-  blackberryCake,
-  coldPheasant,
-  juggedPheasant,
-  mackarelMonte,
-  applePie,
-  creamedSugar,
-  fudge,
-  leekSoup,
-  pruneWhip,
-  yorkshire,
-  dripping,
-  roastBeef,
-  kingsluck,
+  dough,
+  batter,
+  cakeBatter,
   meringue,
-  floatingIsland,
-  seapie,
+  creamedSugar,
+  dripping,
+  marinatedBeef,
+  rosehipJam,
+  blackberryJam,
+  bread,
+  poachedMack,
   pilchardToast,
+  leekSoup,
+  mackarelMonte,
+  coldPheasant,
+  stuffedMarrow,
+  friedMushToast,
+  mushpot,
+  kingsluck,
+  seapie,
+  roastBeef,
+  juggedPheasant,
+  marinatedRoastBeef,
+  steamedVege,
+  onionRings,
+  chips,
+  yorkshire,
+  eggCroquette,
+  roastPotatoes,
+  rosehipCake,
+  fudge,
+  floatingIsland,
+  pruneWhip,
+  applePie,
+  blackberryCake,
+  appleCharlotte,
+  pumpkinPie,
+  stickyToffee,
+  ichorAuroral,
+  gull,
+  iotic,
   earth,
   occult,
   torgue,
@@ -1512,17 +1570,9 @@ const recipeList = [
   rumour,
   viper,
   dog,
-  dough,
-  cakeBatter,
-  rosehip,
-  mushpot,
   chalice,
   honeyscar,
   blueCrown,
-  poachedMack,
-  batter,
-  onionRings,
-  bread,
 ];
 
 export default recipeList;
