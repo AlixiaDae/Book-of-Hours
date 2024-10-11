@@ -1305,6 +1305,17 @@ const steamedVege = recipeFactory(
 
 // Side Dish
 
+const moly = recipeFactory(
+  "Food",
+  "Moly Au Jus",
+  "Moon",
+  ["Moly", "Butter", "Spices"],
+  "N/A",
+  "Kitchens",
+  ["Moth 2", "Scale 2", "Hear 2", "Moon 2", "Nectar"],
+  "Side Dish"
+);
+
 const onionRings = recipeFactory(
   "Food",
   "Onion Rings",
@@ -1472,6 +1483,7 @@ const recipeList = [
   rosehipJam,
   blackberryJam,
   bread,
+  // first
   poachedMack,
   pilchardToast,
   leekSoup,
@@ -1479,6 +1491,7 @@ const recipeList = [
   coldPheasant,
   stuffedMarrow,
   friedMushToast,
+  // main
   mushpot,
   kingsluck,
   seapie,
@@ -1486,11 +1499,14 @@ const recipeList = [
   juggedPheasant,
   marinatedRoastBeef,
   steamedVege,
+  // side
+  moly,
   onionRings,
   chips,
   yorkshire,
   eggCroquette,
   roastPotatoes,
+  // pudding
   rosehipCake,
   fudge,
   floatingIsland,

@@ -563,7 +563,7 @@ const bookArray = [
   ),
   new Book(
     "Towards A Fundamental Aesthetic",
-    "inescapable",
+    "numen: inescapable confinement",
     "Glassblowing and Vesselcrafting"
   ),
   new Book("White Jade Tablet", "impulse", "Rites of the Roots"),
@@ -607,5 +607,7 @@ const bookArray = [
 ];
 
 bookArray.forEach((book) => mainLibraryStorage.addBook(book));
+
+mainLibraryStorage.deleteBook("Towards A Fundamental Aesthetic")
 
 export default mainLibraryStorage;
