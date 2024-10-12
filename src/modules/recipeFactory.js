@@ -1216,6 +1216,17 @@ const friedMushToast = recipeFactory(
   "First Course"
 );
 
+const stuffedPale = recipeFactory(
+  "Food",
+  "Stuffed Pale Marrow",
+  "Heart/Nectar",
+  ["Pale Marrow", "Knife"],
+  "N/A",
+  "Kitchens",
+  ["Heart 2", "Nectar 2", "Winter"],
+  "First Course or Main Course"
+);
+
 // Main Course
 
 const mushpot = recipeFactory(
@@ -1253,7 +1264,7 @@ const seapie = recipeFactory(
   "Food",
   "Sea Pie",
   "Forge",
-  "N/A",
+  ["Beef", "Dough"],
   "N/A",
   "Kitchens",
   ["Forge"],
@@ -1491,6 +1502,7 @@ const recipeList = [
   coldPheasant,
   stuffedMarrow,
   friedMushToast,
+  stuffedPale,
   // main
   mushpot,
   kingsluck,
