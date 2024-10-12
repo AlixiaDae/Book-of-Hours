@@ -604,10 +604,9 @@ const bookArray = [
   new Book("The Book of the White Cat", "revelation", "Watchman's Paradoxes"),
   new Book("The Book of Masks", "impulse", "Weaving and Knotworking"),
   new Book("The Carmine Petal: Revised", "foresight", "Disciplines of Hammer"),
+  new Book("De Ratio Quercuum", "earth-sign", "Rites of the Roots"),
 ];
 
 bookArray.forEach((book) => mainLibraryStorage.addBook(book));
-
-mainLibraryStorage.deleteBook("De Ratio Quercuum");
 
 export default mainLibraryStorage;
