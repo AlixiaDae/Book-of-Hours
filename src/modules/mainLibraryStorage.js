@@ -608,4 +608,6 @@ const bookArray = [
 
 bookArray.forEach((book) => mainLibraryStorage.addBook(book));
 
+mainLibraryStorage.deleteBook("De Ratio Quercuum");
+
 export default mainLibraryStorage;
